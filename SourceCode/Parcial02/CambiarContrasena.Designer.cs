@@ -173,6 +173,7 @@ namespace Parcial02
             this.Controls.Add(this.buttonCambiarContra);
             this.Controls.Add(this.txtActual);
             this.Controls.Add(this.label2);
+            this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "CambiarContrasena";
             this.Text = "CambiarContrasena";
