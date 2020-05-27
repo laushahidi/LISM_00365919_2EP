@@ -35,25 +35,20 @@ namespace Parcial02
                 new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipal));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.tabPage7 = new System.Windows.Forms.TabPage();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dataGridViewUsers = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.buttonEliminar = new System.Windows.Forms.Button();
+            this.cmbUserDelete = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtNuevoFullname = new System.Windows.Forms.TextBox();
+            this.AdminRad = new System.Windows.Forms.RadioButton();
+            this.userrad = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonCreateUser = new System.Windows.Forms.Button();
             this.txtNuevoUsername = new System.Windows.Forms.TextBox();
-            this.AdminRad = new System.Windows.Forms.RadioButton();
-            this.userrad = new System.Windows.Forms.RadioButton();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtNuevoFullname = new System.Windows.Forms.TextBox();
-            this.dataGridViewUsers = new System.Windows.Forms.DataGridView();
-            this.label3 = new System.Windows.Forms.Label();
-            this.cmbUserDelete = new System.Windows.Forms.ComboBox();
-            this.buttonEliminar = new System.Windows.Forms.Button();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dataGridViewNegocios = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.buttonNegocioDelete = new System.Windows.Forms.Button();
@@ -65,30 +60,38 @@ namespace Parcial02
             this.label6 = new System.Windows.Forms.Label();
             this.buttonAddNegocio = new System.Windows.Forms.Button();
             this.txtNegocioDesc = new System.Windows.Forms.TextBox();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.dataGridViewProducts = new System.Windows.Forms.DataGridView();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.buttonDeleteProd = new System.Windows.Forms.Button();
             this.cmbProdDelete = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.cmbNegAddProd = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.buttonAgregarProd = new System.Windows.Forms.Button();
             this.txtProductoName = new System.Windows.Forms.TextBox();
-            this.cmbNegAddProd = new System.Windows.Forms.ComboBox();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.dataGridViewAllOrders = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.tabPage3.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize) (this.dataGridViewUsers)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize) (this.dataGridViewNegocios)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize) (this.dataGridViewProducts)).BeginInit();
             this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
+            this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize) (this.dataGridViewAllOrders)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -102,6 +105,7 @@ namespace Parcial02
             this.tabControl1.Controls.Add(this.tabPage7);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(912, 594);
@@ -113,78 +117,77 @@ namespace Parcial02
             this.tabPage1.Controls.Add(this.groupBox2);
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage1.Size = new System.Drawing.Size(904, 561);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Mantenimiento usuarios";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // dataGridViewUsers
             // 
-            this.tabPage2.Controls.Add(this.dataGridViewNegocios);
-            this.tabPage2.Controls.Add(this.groupBox3);
-            this.tabPage2.Controls.Add(this.groupBox4);
-            this.tabPage2.Location = new System.Drawing.Point(4, 29);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(904, 561);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Mantenimiento negocios";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.dataGridViewUsers.AllowUserToAddRows = false;
+            this.dataGridViewUsers.AllowUserToDeleteRows = false;
+            this.dataGridViewUsers.ColumnHeadersHeightSizeMode =
+                System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewUsers.Location = new System.Drawing.Point(40, 300);
+            this.dataGridViewUsers.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridViewUsers.Name = "dataGridViewUsers";
+            this.dataGridViewUsers.ReadOnly = true;
+            this.dataGridViewUsers.RowTemplate.Height = 24;
+            this.dataGridViewUsers.Size = new System.Drawing.Size(820, 235);
+            this.dataGridViewUsers.TabIndex = 24;
             // 
-            // tabPage3
+            // groupBox2
             // 
-            this.tabPage3.Controls.Add(this.dataGridViewProducts);
-            this.tabPage3.Controls.Add(this.groupBox5);
-            this.tabPage3.Controls.Add(this.groupBox6);
-            this.tabPage3.Location = new System.Drawing.Point(4, 29);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(904, 561);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Mantenimiento productos";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.groupBox2.Controls.Add(this.buttonEliminar);
+            this.groupBox2.Controls.Add(this.cmbUserDelete);
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.groupBox2.Location = new System.Drawing.Point(470, 22);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox2.Size = new System.Drawing.Size(406, 251);
+            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Eliminar usuarios";
             // 
-            // tabPage4
+            // buttonEliminar
             // 
-            this.tabPage4.Location = new System.Drawing.Point(4, 29);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(792, 529);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Ver ordenes";
-            this.tabPage4.UseVisualStyleBackColor = true;
+            this.buttonEliminar.ForeColor = System.Drawing.Color.Red;
+            this.buttonEliminar.Location = new System.Drawing.Point(193, 171);
+            this.buttonEliminar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonEliminar.Name = "buttonEliminar";
+            this.buttonEliminar.Size = new System.Drawing.Size(163, 45);
+            this.buttonEliminar.TabIndex = 32;
+            this.buttonEliminar.Text = "Eliminar";
+            this.buttonEliminar.UseVisualStyleBackColor = true;
+            this.buttonEliminar.Click += new System.EventHandler(this.buttonEliminar_Click);
             // 
-            // tabPage5
+            // cmbUserDelete
             // 
-            this.tabPage5.Location = new System.Drawing.Point(4, 29);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(792, 529);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "Grafica";
-            this.tabPage5.UseVisualStyleBackColor = true;
+            this.cmbUserDelete.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbUserDelete.FormattingEnabled = true;
+            this.cmbUserDelete.Location = new System.Drawing.Point(158, 42);
+            this.cmbUserDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbUserDelete.Name = "cmbUserDelete";
+            this.cmbUserDelete.Size = new System.Drawing.Size(198, 31);
+            this.cmbUserDelete.TabIndex = 31;
             // 
-            // tabPage6
+            // label3
             // 
-            this.tabPage6.Location = new System.Drawing.Point(4, 29);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(792, 529);
-            this.tabPage6.TabIndex = 5;
-            this.tabPage6.Text = "Ordenes";
-            this.tabPage6.UseVisualStyleBackColor = true;
-            // 
-            // tabPage7
-            // 
-            this.tabPage7.Location = new System.Drawing.Point(4, 29);
-            this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(904, 561);
-            this.tabPage7.TabIndex = 6;
-            this.tabPage7.Text = "Mis direcciones";
-            this.tabPage7.UseVisualStyleBackColor = true;
+            this.label3.BackColor = System.Drawing.Color.White;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label3.Location = new System.Drawing.Point(19, 32);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(119, 49);
+            this.label3.TabIndex = 30;
+            this.label3.Text = "Usuario:";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // groupBox1
             // 
@@ -197,26 +200,57 @@ namespace Parcial02
             this.groupBox1.Controls.Add(this.txtNuevoUsername);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.groupBox1.Location = new System.Drawing.Point(23, 23);
+            this.groupBox1.Location = new System.Drawing.Point(23, 22);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Size = new System.Drawing.Size(405, 251);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Crear usuarios";
             // 
-            // groupBox2
+            // label2
             // 
-            this.groupBox2.Controls.Add(this.buttonEliminar);
-            this.groupBox2.Controls.Add(this.cmbUserDelete);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold,
+            this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.groupBox2.Location = new System.Drawing.Point(470, 23);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(406, 251);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Eliminar usuarios";
+            this.label2.Location = new System.Drawing.Point(3, 32);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(119, 49);
+            this.label2.TabIndex = 33;
+            this.label2.Text = "Nombre:";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtNuevoFullname
+            // 
+            this.txtNuevoFullname.Location = new System.Drawing.Point(142, 45);
+            this.txtNuevoFullname.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtNuevoFullname.MaxLength = 25;
+            this.txtNuevoFullname.Name = "txtNuevoFullname";
+            this.txtNuevoFullname.Size = new System.Drawing.Size(236, 30);
+            this.txtNuevoFullname.TabIndex = 32;
+            // 
+            // AdminRad
+            // 
+            this.AdminRad.Location = new System.Drawing.Point(17, 184);
+            this.AdminRad.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.AdminRad.Name = "AdminRad";
+            this.AdminRad.Size = new System.Drawing.Size(173, 42);
+            this.AdminRad.TabIndex = 31;
+            this.AdminRad.Text = "Administrador";
+            this.AdminRad.UseVisualStyleBackColor = true;
+            // 
+            // userrad
+            // 
+            this.userrad.Checked = true;
+            this.userrad.Location = new System.Drawing.Point(17, 131);
+            this.userrad.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.userrad.Name = "userrad";
+            this.userrad.Size = new System.Drawing.Size(117, 46);
+            this.userrad.TabIndex = 30;
+            this.userrad.TabStop = true;
+            this.userrad.Text = "Usuario";
+            this.userrad.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -244,102 +278,26 @@ namespace Parcial02
             // 
             // txtNuevoUsername
             // 
-            this.txtNuevoUsername.Location = new System.Drawing.Point(142, 83);
+            this.txtNuevoUsername.Location = new System.Drawing.Point(142, 82);
             this.txtNuevoUsername.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNuevoUsername.MaxLength = 25;
             this.txtNuevoUsername.Name = "txtNuevoUsername";
             this.txtNuevoUsername.Size = new System.Drawing.Size(236, 30);
             this.txtNuevoUsername.TabIndex = 27;
             // 
-            // AdminRad
+            // tabPage2
             // 
-            this.AdminRad.Location = new System.Drawing.Point(17, 184);
-            this.AdminRad.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.AdminRad.Name = "AdminRad";
-            this.AdminRad.Size = new System.Drawing.Size(173, 42);
-            this.AdminRad.TabIndex = 31;
-            this.AdminRad.Text = "Administrador";
-            this.AdminRad.UseVisualStyleBackColor = true;
-            // 
-            // userrad
-            // 
-            this.userrad.Checked = true;
-            this.userrad.Location = new System.Drawing.Point(17, 131);
-            this.userrad.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.userrad.Name = "userrad";
-            this.userrad.Size = new System.Drawing.Size(117, 46);
-            this.userrad.TabIndex = 30;
-            this.userrad.TabStop = true;
-            this.userrad.Text = "Usuario";
-            this.userrad.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold,
-                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label2.Location = new System.Drawing.Point(3, 33);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(119, 49);
-            this.label2.TabIndex = 33;
-            this.label2.Text = "Nombre:";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtNuevoFullname
-            // 
-            this.txtNuevoFullname.Location = new System.Drawing.Point(142, 45);
-            this.txtNuevoFullname.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtNuevoFullname.MaxLength = 25;
-            this.txtNuevoFullname.Name = "txtNuevoFullname";
-            this.txtNuevoFullname.Size = new System.Drawing.Size(236, 30);
-            this.txtNuevoFullname.TabIndex = 32;
-            // 
-            // dataGridViewUsers
-            // 
-            this.dataGridViewUsers.AllowUserToAddRows = false;
-            this.dataGridViewUsers.AllowUserToDeleteRows = false;
-            this.dataGridViewUsers.ColumnHeadersHeightSizeMode =
-                System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewUsers.Location = new System.Drawing.Point(40, 300);
-            this.dataGridViewUsers.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridViewUsers.Name = "dataGridViewUsers";
-            this.dataGridViewUsers.ReadOnly = true;
-            this.dataGridViewUsers.RowTemplate.Height = 24;
-            this.dataGridViewUsers.Size = new System.Drawing.Size(820, 235);
-            this.dataGridViewUsers.TabIndex = 24;
-            // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.Color.White;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold,
-                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label3.Location = new System.Drawing.Point(19, 33);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(119, 49);
-            this.label3.TabIndex = 30;
-            this.label3.Text = "Usuario:";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // cmbUserDelete
-            // 
-            this.cmbUserDelete.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbUserDelete.FormattingEnabled = true;
-            this.cmbUserDelete.Location = new System.Drawing.Point(158, 43);
-            this.cmbUserDelete.Name = "cmbUserDelete";
-            this.cmbUserDelete.Size = new System.Drawing.Size(198, 31);
-            this.cmbUserDelete.TabIndex = 31;
-            // 
-            // buttonEliminar
-            // 
-            this.buttonEliminar.ForeColor = System.Drawing.Color.Red;
-            this.buttonEliminar.Location = new System.Drawing.Point(193, 171);
-            this.buttonEliminar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.buttonEliminar.Name = "buttonEliminar";
-            this.buttonEliminar.Size = new System.Drawing.Size(163, 45);
-            this.buttonEliminar.TabIndex = 32;
-            this.buttonEliminar.Text = "Eliminar";
-            this.buttonEliminar.UseVisualStyleBackColor = true;
-            this.buttonEliminar.Click += new System.EventHandler(this.buttonEliminar_Click);
+            this.tabPage2.Controls.Add(this.dataGridViewNegocios);
+            this.tabPage2.Controls.Add(this.groupBox3);
+            this.tabPage2.Controls.Add(this.groupBox4);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage2.Size = new System.Drawing.Size(904, 565);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Mantenimiento negocios";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // dataGridViewNegocios
             // 
@@ -363,7 +321,9 @@ namespace Parcial02
             this.groupBox3.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.groupBox3.Location = new System.Drawing.Point(473, 24);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox3.Size = new System.Drawing.Size(406, 251);
             this.groupBox3.TabIndex = 26;
             this.groupBox3.TabStop = false;
@@ -385,7 +345,8 @@ namespace Parcial02
             // 
             this.cmbNegociosDelete.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbNegociosDelete.FormattingEnabled = true;
-            this.cmbNegociosDelete.Location = new System.Drawing.Point(158, 43);
+            this.cmbNegociosDelete.Location = new System.Drawing.Point(158, 42);
+            this.cmbNegociosDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbNegociosDelete.Name = "cmbNegociosDelete";
             this.cmbNegociosDelete.Size = new System.Drawing.Size(198, 31);
             this.cmbNegociosDelete.TabIndex = 31;
@@ -395,7 +356,7 @@ namespace Parcial02
             this.label4.BackColor = System.Drawing.Color.White;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label4.Location = new System.Drawing.Point(19, 33);
+            this.label4.Location = new System.Drawing.Point(19, 32);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(119, 49);
             this.label4.TabIndex = 30;
@@ -412,7 +373,9 @@ namespace Parcial02
             this.groupBox4.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.groupBox4.Location = new System.Drawing.Point(26, 24);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox4.Size = new System.Drawing.Size(405, 251);
             this.groupBox4.TabIndex = 25;
             this.groupBox4.TabStop = false;
@@ -423,7 +386,7 @@ namespace Parcial02
             this.label5.BackColor = System.Drawing.Color.White;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label5.Location = new System.Drawing.Point(3, 33);
+            this.label5.Location = new System.Drawing.Point(3, 32);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(119, 49);
             this.label5.TabIndex = 33;
@@ -473,6 +436,20 @@ namespace Parcial02
             this.txtNegocioDesc.TabIndex = 27;
             this.txtNegocioDesc.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNegocioDesc_KeyDown);
             // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.dataGridViewProducts);
+            this.tabPage3.Controls.Add(this.groupBox5);
+            this.tabPage3.Controls.Add(this.groupBox6);
+            this.tabPage3.Location = new System.Drawing.Point(4, 29);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage3.Size = new System.Drawing.Size(904, 561);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Mantenimiento productos";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
             // dataGridViewProducts
             // 
             this.dataGridViewProducts.AllowUserToAddRows = false;
@@ -495,7 +472,9 @@ namespace Parcial02
             this.groupBox5.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.groupBox5.Location = new System.Drawing.Point(473, 24);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox5.Size = new System.Drawing.Size(406, 251);
             this.groupBox5.TabIndex = 29;
             this.groupBox5.TabStop = false;
@@ -517,7 +496,8 @@ namespace Parcial02
             // 
             this.cmbProdDelete.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbProdDelete.FormattingEnabled = true;
-            this.cmbProdDelete.Location = new System.Drawing.Point(158, 43);
+            this.cmbProdDelete.Location = new System.Drawing.Point(158, 42);
+            this.cmbProdDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbProdDelete.Name = "cmbProdDelete";
             this.cmbProdDelete.Size = new System.Drawing.Size(198, 31);
             this.cmbProdDelete.TabIndex = 31;
@@ -527,7 +507,7 @@ namespace Parcial02
             this.label7.BackColor = System.Drawing.Color.White;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label7.Location = new System.Drawing.Point(19, 33);
+            this.label7.Location = new System.Drawing.Point(19, 32);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(119, 49);
             this.label7.TabIndex = 30;
@@ -544,11 +524,23 @@ namespace Parcial02
             this.groupBox6.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.groupBox6.Location = new System.Drawing.Point(26, 24);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox6.Size = new System.Drawing.Size(405, 251);
             this.groupBox6.TabIndex = 28;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Agregar producto";
+            // 
+            // cmbNegAddProd
+            // 
+            this.cmbNegAddProd.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbNegAddProd.FormattingEnabled = true;
+            this.cmbNegAddProd.Location = new System.Drawing.Point(142, 45);
+            this.cmbNegAddProd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbNegAddProd.Name = "cmbNegAddProd";
+            this.cmbNegAddProd.Size = new System.Drawing.Size(236, 31);
+            this.cmbNegAddProd.TabIndex = 34;
             // 
             // label8
             // 
@@ -567,7 +559,7 @@ namespace Parcial02
             this.label9.BackColor = System.Drawing.Color.White;
             this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label9.Location = new System.Drawing.Point(6, 33);
+            this.label9.Location = new System.Drawing.Point(6, 32);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(119, 49);
             this.label9.TabIndex = 29;
@@ -595,14 +587,64 @@ namespace Parcial02
             this.txtProductoName.Size = new System.Drawing.Size(236, 30);
             this.txtProductoName.TabIndex = 27;
             // 
-            // cmbNegAddProd
+            // tabPage4
             // 
-            this.cmbNegAddProd.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbNegAddProd.FormattingEnabled = true;
-            this.cmbNegAddProd.Location = new System.Drawing.Point(142, 45);
-            this.cmbNegAddProd.Name = "cmbNegAddProd";
-            this.cmbNegAddProd.Size = new System.Drawing.Size(236, 31);
-            this.cmbNegAddProd.TabIndex = 34;
+            this.tabPage4.Controls.Add(this.dataGridViewAllOrders);
+            this.tabPage4.Location = new System.Drawing.Point(4, 29);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage4.Size = new System.Drawing.Size(904, 561);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Ver ordenes";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Location = new System.Drawing.Point(4, 25);
+            this.tabPage5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage5.Size = new System.Drawing.Size(904, 565);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "Grafica";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.Location = new System.Drawing.Point(4, 25);
+            this.tabPage6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage6.Size = new System.Drawing.Size(904, 565);
+            this.tabPage6.TabIndex = 5;
+            this.tabPage6.Text = "Ordenes";
+            this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // tabPage7
+            // 
+            this.tabPage7.Location = new System.Drawing.Point(4, 25);
+            this.tabPage7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage7.Size = new System.Drawing.Size(904, 565);
+            this.tabPage7.TabIndex = 6;
+            this.tabPage7.Text = "Mis direcciones";
+            this.tabPage7.UseVisualStyleBackColor = true;
+            // 
+            // dataGridViewAllOrders
+            // 
+            this.dataGridViewAllOrders.AllowUserToAddRows = false;
+            this.dataGridViewAllOrders.AllowUserToDeleteRows = false;
+            this.dataGridViewAllOrders.ColumnHeadersHeightSizeMode =
+                System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewAllOrders.Location = new System.Drawing.Point(42, 21);
+            this.dataGridViewAllOrders.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridViewAllOrders.Name = "dataGridViewAllOrders";
+            this.dataGridViewAllOrders.ReadOnly = true;
+            this.dataGridViewAllOrders.RowTemplate.Height = 24;
+            this.dataGridViewAllOrders.Size = new System.Drawing.Size(820, 517);
+            this.dataGridViewAllOrders.TabIndex = 31;
             // 
             // MenuPrincipal
             // 
@@ -619,20 +661,22 @@ namespace Parcial02
             this.Load += new System.EventHandler(this.MenuPrincipal_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize) (this.dataGridViewUsers)).EndInit();
+            this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize) (this.dataGridViewUsers)).EndInit();
+            this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize) (this.dataGridViewNegocios)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize) (this.dataGridViewProducts)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
+            this.tabPage4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize) (this.dataGridViewAllOrders)).EndInit();
             this.ResumeLayout(false);
         }
 
@@ -681,5 +725,6 @@ namespace Parcial02
         private System.Windows.Forms.ComboBox cmbProdDelete;
         private System.Windows.Forms.Button buttonDeleteProd;
         private System.Windows.Forms.DataGridView dataGridViewProducts;
+        private System.Windows.Forms.DataGridView dataGridViewAllOrders;
     }
 }

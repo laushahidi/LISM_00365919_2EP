@@ -35,18 +35,18 @@ namespace Parcial02
                 actualizarControles();
                 actualizarControlesB();
                 actualizarControlesP();
-                
+                actualizarControlesO();
                 //configuarGrafico();
             }
             else
             {
-                /*tabControl1.TabPages[1].Parent = null;
+                tabControl1.TabPages[1].Parent = null;
                 tabControl1.TabPages[1].Parent = null;
                 tabControl1.TabPages.Remove(tabPage1);
                 tabControl1.TabPages.Remove(tabPage2);
                 tabControl1.TabPages.Remove(tabPage3);
                 tabControl1.TabPages.Remove(tabPage4);
-                tabControl1.TabPages.Remove(tabPage5);*/
+                tabControl1.TabPages.Remove(tabPage5);
 
             }
         }
@@ -103,6 +103,14 @@ namespace Parcial02
             cmbNegAddProd.ValueMember = "idbusiness";
             cmbNegAddProd.DisplayMember = "name";
             cmbNegAddProd.DataSource = NegociosConsulta.getLista(); 
+        }
+
+        private void actualizarControlesO()
+        {
+            List<Orden> lista = OrdenesConsulta.getLista();
+
+            dataGridViewAllOrders.DataSource = null;
+            dataGridViewAllOrders.DataSource = OrdenesConsulta.adminVerPedidos();
         }
 
         private void MenuPrincipal_FormClosing(object sender, FormClosingEventArgs e)

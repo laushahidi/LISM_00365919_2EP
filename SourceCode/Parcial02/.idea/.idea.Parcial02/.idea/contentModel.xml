@@ -21,6 +21,7 @@
       <e p="NegociosConsulta.cs" t="Include" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="Orden.cs" t="Include" />
+      <e p="OrdenesConsulta.cs" t="Include" />
       <e p="packages" t="ExcludeRecursive" />
       <e p="packages.config" t="Include" />
       <e p="Parcial02.csproj" t="IncludeRecursive" />

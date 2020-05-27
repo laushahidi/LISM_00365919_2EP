@@ -128,6 +128,7 @@
         <Compile Include="Negocio.cs" />
         <Compile Include="NegociosConsulta.cs" />
         <Compile Include="Orden.cs" />
+        <Compile Include="OrdenesConsulta.cs" />
         <Compile Include="Producto.cs" />
         <Compile Include="ProductosConsulta.cs" />
         <Compile Include="Program.cs" />
