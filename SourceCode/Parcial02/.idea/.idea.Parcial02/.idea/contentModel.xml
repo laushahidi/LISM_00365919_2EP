@@ -6,6 +6,9 @@
     <e p="C:\Users\Lauri\Documents\02 PARCIAL - POO\LISM_00365919_2EP\SourceCode\Parcial02" t="IncludeRecursive">
       <e p="App.config" t="Include" />
       <e p="bin" t="ExcludeRecursive" />
+      <e p="CambiarContrasena.cs" t="Include" />
+      <e p="CambiarContrasena.Designer.cs" t="Include" />
+      <e p="CambiarContrasena.resx" t="Include" />
       <e p="ConnectionDB.cs" t="Include" />
       <e p="Direccion.cs" t="Include" />
       <e p="Form1.cs" t="Include" />

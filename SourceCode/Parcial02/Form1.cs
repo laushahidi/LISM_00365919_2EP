@@ -57,7 +57,13 @@ namespace Parcial02
         {
             poblarControles();
         }
-        
-        
+
+
+        private void buttonChangePass_Click(object sender, EventArgs e)
+        {
+            CambiarContrasena unaVentana = new CambiarContrasena();
+            unaVentana.ShowDialog();
+            poblarControles();
+        }
     }
 }

@@ -105,6 +105,7 @@
             this.buttonChangePass.TabIndex = 11;
             this.buttonChangePass.Text = "Actualizar contrasena";
             this.buttonChangePass.UseVisualStyleBackColor = true;
+            this.buttonChangePass.Click += new System.EventHandler(this.buttonChangePass_Click);
             // 
             // Form1
             // 

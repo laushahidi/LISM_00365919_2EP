@@ -27,7 +27,14 @@ namespace Parcial02
             }
             return lista;
         }
-        
+        public static void actualizarContra(string usuario, string nuevaContra)
+        {
+            string sql = String.Format(
+                "update appuser set password ='{0}' where username='{1}';",
+                nuevaContra, usuario);
+            
+            ConnectionDB.ExecuteNonQuery(sql);
+        }
         
     }
 }

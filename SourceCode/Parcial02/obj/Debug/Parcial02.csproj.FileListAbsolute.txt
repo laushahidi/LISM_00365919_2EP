@@ -40,3 +40,4 @@ C:\Users\Lauri\Documents\02 PARCIAL - POO\LISM_00365919_2EP\SourceCode\Parcial02
 C:\Users\Lauri\Documents\02 PARCIAL - POO\LISM_00365919_2EP\SourceCode\Parcial02\obj\Debug\Parcial02.Form1.resources
 C:\Users\Lauri\Documents\02 PARCIAL - POO\LISM_00365919_2EP\SourceCode\Parcial02\obj\Debug\Parcial02.MenuPrincipal.resources
 C:\Users\Lauri\Documents\02 PARCIAL - POO\LISM_00365919_2EP\SourceCode\Parcial02\obj\Debug\Parcial02.csproj.CopyComplete
+C:\Users\Lauri\Documents\02 PARCIAL - POO\LISM_00365919_2EP\SourceCode\Parcial02\obj\Debug\Parcial02.CambiarContrasena.resources
