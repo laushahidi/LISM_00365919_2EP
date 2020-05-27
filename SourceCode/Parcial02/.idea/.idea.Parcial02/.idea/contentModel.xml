@@ -7,14 +7,21 @@
       <e p="App.config" t="Include" />
       <e p="bin" t="ExcludeRecursive" />
       <e p="ConnectionDB.cs" t="Include" />
+      <e p="Direccion.cs" t="Include" />
       <e p="Form1.cs" t="Include" />
       <e p="Form1.Designer.cs" t="Include" />
       <e p="Form1.resx" t="Include" />
+      <e p="MenuPrincipal.cs" t="Include" />
+      <e p="MenuPrincipal.Designer.cs" t="Include" />
+      <e p="MenuPrincipal.resx" t="Include" />
+      <e p="Negocio.cs" t="Include" />
       <e p="obj" t="ExcludeRecursive" />
+      <e p="Orden.cs" t="Include" />
       <e p="packages" t="ExcludeRecursive" />
       <e p="packages.config" t="Include" />
       <e p="Parcial02.csproj" t="IncludeRecursive" />
       <e p="Parcial02.sln" t="IncludeFlat" />
+      <e p="Producto.cs" t="Include" />
       <e p="Program.cs" t="Include" />
       <e p="Properties" t="Include">
         <e p="AssemblyInfo.cs" t="Include" />

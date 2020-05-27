@@ -1,7 +1,33 @@
-﻿namespace Parcial02
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+
+namespace Parcial02
 {
-    public class UsuariosConsulta
+    public static class UsuariosConsulta
     {
+        public static List<Usuario> getLista()
+        {
+            string sql = "select * from appuser";
+           
+            DataTable dt = ConnectionDB.ExecuteQuery(sql);
+
+            List<Usuario> lista = new List<Usuario>();
+            
+            foreach (DataRow fila in dt.Rows)
+            {
+                Usuario user = new Usuario();
+                user.idUser = Convert.ToInt32(fila[0].ToString());
+                user.fullname = fila[1].ToString();
+                user.username = fila[2].ToString();
+                user.password = fila[3].ToString();
+                user.userType = Convert.ToBoolean(fila[4].ToString());
+                
+                lista.Add(user);
+            }
+            return lista;
+        }
+        
         
     }
 }

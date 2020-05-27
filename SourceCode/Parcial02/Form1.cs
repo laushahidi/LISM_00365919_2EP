@@ -19,36 +19,45 @@ namespace Parcial02
         
         private void poblarControles()
         {
-            cmbUser.DataSource = null;
-            cmbUser.ValueMember = "contrasena";
-            cmbUser.DisplayMember = "usuario";
-            cmbUser.DataSource = UsuariosConsulta.getLista();
+            comboBox1.DataSource = null;
+            comboBox1.ValueMember = "password";
+            comboBox1.DisplayMember = "username";
+            comboBox1.DataSource = UsuariosConsulta.getLista();
         }
 
 
         private void buttonIngresar_Click(object sender, EventArgs e)
         {
-            if (cmbUser.SelectedValue.Equals(txtPass.Text))
+            if (comboBox1.SelectedValue.Equals(textBox1.Text))
             {
-                Usuario u = (Usuario) cmbUser.SelectedItem;
+                //Usuario u = (Usuario) comboBox1.SelectedItem;
+                Usuario u = new Usuario();
+                u.username = comboBox1.SelectedValue.ToString();
                                  
                 MessageBox.Show("¡Bienvenido!", 
-                    "Fruteria frescura", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    "Hugo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 
                 MenuPrincipal ventana = new MenuPrincipal(u);
                 ventana.Show();
                 this.Hide();
-               
             }
             else
-                MessageBox.Show("¡Contraseña incorrecta!", "Fruteria Frescura",
+                MessageBox.Show("¡Contraseña incorrecta!", "Hugo",
                     MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
-        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+
+        private void txtPass_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter) buttonIngresar_Click(sender, e);
         }
+
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            poblarControles();
         }
+        
+        
     }
 }
