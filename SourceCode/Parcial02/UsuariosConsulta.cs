@@ -36,5 +36,28 @@ namespace Parcial02
             ConnectionDB.ExecuteNonQuery(sql);
         }
         
+        public static void crearNuevo(string fullname, string username, bool userType)
+        {
+            string sql = String.Format(
+                "insert into appuser(fullname, username, password, usertype) " +
+                "values('{0}', '{1}', '{2}', {3});",
+                fullname, username, username, userType);
+            
+            //INSERT INTO APPUSER(fullname, username, password, userType)
+            //VALUES('Walter Morales', 'wmorales', 'admin', true);
+
+            
+            ConnectionDB.ExecuteNonQuery(sql);
+        }
+        
+        public static void eliminar(string username)
+        {
+            string sql = String.Format(
+                "delete from appuser where username ='{0}';",
+                username);
+                    
+            ConnectionDB.ExecuteNonQuery(sql);
+        }
+        
     }
 }
