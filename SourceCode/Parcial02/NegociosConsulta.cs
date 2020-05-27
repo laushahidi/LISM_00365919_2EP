@@ -8,7 +8,7 @@ namespace Parcial02
     {
         public static List<Negocio> getLista()
         {
-            string sql = "SELECT * FROM BUSINESS";
+            string sql = "select * from business";
            
             DataTable dt = ConnectionDB.ExecuteQuery(sql);
 

@@ -129,6 +129,7 @@
         <Compile Include="NegociosConsulta.cs" />
         <Compile Include="Orden.cs" />
         <Compile Include="Producto.cs" />
+        <Compile Include="ProductosConsulta.cs" />
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
         <Compile Include="Usuario.cs" />

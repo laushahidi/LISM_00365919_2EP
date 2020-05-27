@@ -9,7 +9,12 @@ namespace Parcial02
         public string descripcion { get; set; }
         
 
-        public Negocio() {}
+        public Negocio() 
+        {
+            idBusiness = 0;
+            name = "";
+            descripcion = "";
+        }
 
         public Negocio(int n_idBusiness, string n_name, string n_descripcion)
         {

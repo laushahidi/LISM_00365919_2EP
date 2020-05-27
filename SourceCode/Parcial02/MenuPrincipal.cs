@@ -21,33 +21,6 @@ namespace Parcial02
             usuario = pUsuario;
 
         }
-
-        private void actualizarControles()
-        {
-
-            List<Usuario> lista = UsuariosConsulta.getLista();
-
-            dataGridViewUsers.DataSource = null;
-            dataGridViewUsers.DataSource = lista;
-            
-            cmbUserDelete.DataSource = null;
-            cmbUserDelete.ValueMember = "password";
-            cmbUserDelete.DisplayMember = "username";
-            cmbUserDelete.DataSource = UsuariosConsulta.getLista();
-        }
-        private void actualizarControlesB()
-        {
-
-            List<Negocio> lista = NegociosConsulta.getLista();
-
-            dataGridViewNegocios.DataSource = null;
-            dataGridViewNegocios.DataSource = lista;
-            
-            cmbNegociosDelete.DataSource = null;
-            cmbNegociosDelete.ValueMember = "idBusiness";
-            cmbNegociosDelete.DisplayMember = "name";
-            cmbNegociosDelete.DataSource = NegociosConsulta.getLista();
-        }
         
         private void MenuPrincipal_Load(object sender, EventArgs e)
         {
@@ -59,24 +32,78 @@ namespace Parcial02
             if (usuario.userType)
             {
 
-                /*actualizarControles();
+                actualizarControles();
+                actualizarControlesB();
                 actualizarControlesP();
-                actualizarControlesNonAdminToo();
-                configuarGrafico();*/
+                
+                //configuarGrafico();
             }
             else
             {
-                /*actualizarControlesNonAdminToo();
+                /*tabControl1.TabPages[1].Parent = null;
                 tabControl1.TabPages[1].Parent = null;
-                tabControl1.TabPages[1].Parent = null;
-                tabControl1.TabPages[1].Parent = null;
-                tabControl1.TabPages[1].Parent = null;
-                tabControl1.TabPages[1].Parent = null;
-                tabControl1.TabPages.Remove(tabPage8);*/
+                tabControl1.TabPages.Remove(tabPage1);
+                tabControl1.TabPages.Remove(tabPage2);
+                tabControl1.TabPages.Remove(tabPage3);
+                tabControl1.TabPages.Remove(tabPage4);
+                tabControl1.TabPages.Remove(tabPage5);*/
 
             }
         }
+        private void actualizarControles()
+        {
 
+            List<Usuario> lista = UsuariosConsulta.getLista();
+
+            dataGridViewUsers.DataSource = null;
+            dataGridViewUsers.DataSource = lista;
+            
+            cmbUserDelete.DataSource = null;
+            cmbUserDelete.ValueMember = "password";
+            cmbUserDelete.DisplayMember = "username";
+            cmbUserDelete.DataSource = lista;
+        }
+        private void actualizarControlesB()
+        {
+
+            List<Negocio> lista = NegociosConsulta.getLista();
+
+            dataGridViewNegocios.DataSource = null;
+            dataGridViewNegocios.DataSource = lista;
+            
+            cmbNegociosDelete.DataSource = null;
+            cmbNegociosDelete.ValueMember = "idbusiness";
+            cmbNegociosDelete.DisplayMember = "name";
+            cmbNegociosDelete.DataSource = lista;
+            
+            cmbProdDelete.DataSource = null;
+            cmbProdDelete.ValueMember = "idproduct";
+            cmbProdDelete.DisplayMember = "name";
+            cmbProdDelete.DataSource = ProductosConsulta.getLista();
+            
+            cmbNegAddProd.DataSource = null;
+            cmbNegAddProd.ValueMember = "idbusiness";
+            cmbNegAddProd.DisplayMember = "name";
+            cmbNegAddProd.DataSource = NegociosConsulta.getLista(); 
+        }
+        
+        private void actualizarControlesP()
+        {
+            List<Producto> lista = ProductosConsulta.getLista();
+            
+            cmbProdDelete.DataSource = null;
+            cmbProdDelete.ValueMember = "idproduct";
+            cmbProdDelete.DisplayMember = "name";
+            cmbProdDelete.DataSource = lista;
+            
+            dataGridViewProducts.DataSource = null;
+            dataGridViewProducts.DataSource = lista;
+            
+            cmbNegAddProd.DataSource = null;
+            cmbNegAddProd.ValueMember = "idbusiness";
+            cmbNegAddProd.DisplayMember = "name";
+            cmbNegAddProd.DataSource = NegociosConsulta.getLista(); 
+        }
 
         private void MenuPrincipal_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -165,7 +192,7 @@ namespace Parcial02
 
         private void buttonNegocioDelete_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Seguro que desea eliminar el negocio " + cmbUserDelete.Text + "?",
+            if (MessageBox.Show("¿Seguro que desea eliminar el negocio " + cmbNegociosDelete.Text + "?",
                 "Hugo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 NegociosConsulta.eliminarNegocio(cmbNegociosDelete.Text);
@@ -180,6 +207,48 @@ namespace Parcial02
         private void txtNegocioDesc_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter) buttonAddNegocio_Click(sender, e);
+        }
+
+        private void buttonAgregarProd_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Negocio b = new Negocio();
+                b.name = cmbNegAddProd.Text;
+
+                
+                Producto p = new Producto();
+                p.name = txtProductoName.Text;
+
+                ProductosConsulta.AgregarProducto(p, b);
+
+                MessageBox.Show("Producto agregado exitosamente", "Hugo",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                txtProductoName.Clear();
+                actualizarControlesP();
+
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show("Error: " + exception.Message, "Hugo",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
+        private void buttonDeleteProd_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Seguro que desea eliminar el producto " + cmbProdDelete.Text + "?",
+                "Hugo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                ProductosConsulta.eliminarProducto(cmbProdDelete.Text);
+
+                MessageBox.Show("¡Negocio eliminado exitosamente!",
+                    "Hugo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                actualizarControlesP();
+            }
         }
     }
 }

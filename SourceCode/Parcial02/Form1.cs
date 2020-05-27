@@ -30,9 +30,9 @@ namespace Parcial02
         {
             if (comboBox1.SelectedValue.Equals(textBox1.Text))
             {
-                //Usuario u = (Usuario) comboBox1.SelectedItem;
-                Usuario u = new Usuario();
-                u.username = comboBox1.SelectedValue.ToString();
+                Usuario u = (Usuario) comboBox1.SelectedItem;
+                //Usuario u = new Usuario();
+                //u.username = comboBox1.SelectedValue.ToString();
                                  
                 MessageBox.Show("¡Bienvenido!", 
                     "Hugo", MessageBoxButtons.OK, MessageBoxIcon.Information);

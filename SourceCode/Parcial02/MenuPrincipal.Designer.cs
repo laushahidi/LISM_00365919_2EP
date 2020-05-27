@@ -65,15 +65,30 @@ namespace Parcial02
             this.label6 = new System.Windows.Forms.Label();
             this.buttonAddNegocio = new System.Windows.Forms.Button();
             this.txtNegocioDesc = new System.Windows.Forms.TextBox();
+            this.dataGridViewProducts = new System.Windows.Forms.DataGridView();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.buttonDeleteProd = new System.Windows.Forms.Button();
+            this.cmbProdDelete = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.buttonAgregarProd = new System.Windows.Forms.Button();
+            this.txtProductoName = new System.Windows.Forms.TextBox();
+            this.cmbNegAddProd = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize) (this.dataGridViewUsers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.dataGridViewNegocios)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize) (this.dataGridViewProducts)).BeginInit();
+            this.groupBox5.SuspendLayout();
+            this.groupBox6.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -120,10 +135,13 @@ namespace Parcial02
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.dataGridViewProducts);
+            this.tabPage3.Controls.Add(this.groupBox5);
+            this.tabPage3.Controls.Add(this.groupBox6);
             this.tabPage3.Location = new System.Drawing.Point(4, 29);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(792, 529);
+            this.tabPage3.Size = new System.Drawing.Size(904, 561);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Mantenimiento productos";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -428,7 +446,7 @@ namespace Parcial02
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label6.Location = new System.Drawing.Point(3, 98);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(119, 49);
+            this.label6.Size = new System.Drawing.Size(133, 49);
             this.label6.TabIndex = 29;
             this.label6.Text = "Descripcion:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -455,6 +473,137 @@ namespace Parcial02
             this.txtNegocioDesc.TabIndex = 27;
             this.txtNegocioDesc.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNegocioDesc_KeyDown);
             // 
+            // dataGridViewProducts
+            // 
+            this.dataGridViewProducts.AllowUserToAddRows = false;
+            this.dataGridViewProducts.AllowUserToDeleteRows = false;
+            this.dataGridViewProducts.ColumnHeadersHeightSizeMode =
+                System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewProducts.Location = new System.Drawing.Point(43, 301);
+            this.dataGridViewProducts.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridViewProducts.Name = "dataGridViewProducts";
+            this.dataGridViewProducts.ReadOnly = true;
+            this.dataGridViewProducts.RowTemplate.Height = 24;
+            this.dataGridViewProducts.Size = new System.Drawing.Size(820, 235);
+            this.dataGridViewProducts.TabIndex = 30;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.buttonDeleteProd);
+            this.groupBox5.Controls.Add(this.cmbProdDelete);
+            this.groupBox5.Controls.Add(this.label7);
+            this.groupBox5.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.groupBox5.Location = new System.Drawing.Point(473, 24);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(406, 251);
+            this.groupBox5.TabIndex = 29;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Eliminar producto";
+            // 
+            // buttonDeleteProd
+            // 
+            this.buttonDeleteProd.ForeColor = System.Drawing.Color.Red;
+            this.buttonDeleteProd.Location = new System.Drawing.Point(193, 171);
+            this.buttonDeleteProd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonDeleteProd.Name = "buttonDeleteProd";
+            this.buttonDeleteProd.Size = new System.Drawing.Size(163, 45);
+            this.buttonDeleteProd.TabIndex = 32;
+            this.buttonDeleteProd.Text = "Eliminar";
+            this.buttonDeleteProd.UseVisualStyleBackColor = true;
+            this.buttonDeleteProd.Click += new System.EventHandler(this.buttonDeleteProd_Click);
+            // 
+            // cmbProdDelete
+            // 
+            this.cmbProdDelete.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbProdDelete.FormattingEnabled = true;
+            this.cmbProdDelete.Location = new System.Drawing.Point(158, 43);
+            this.cmbProdDelete.Name = "cmbProdDelete";
+            this.cmbProdDelete.Size = new System.Drawing.Size(198, 31);
+            this.cmbProdDelete.TabIndex = 31;
+            // 
+            // label7
+            // 
+            this.label7.BackColor = System.Drawing.Color.White;
+            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label7.Location = new System.Drawing.Point(19, 33);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(119, 49);
+            this.label7.TabIndex = 30;
+            this.label7.Text = "Producto:";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.cmbNegAddProd);
+            this.groupBox6.Controls.Add(this.label8);
+            this.groupBox6.Controls.Add(this.label9);
+            this.groupBox6.Controls.Add(this.buttonAgregarProd);
+            this.groupBox6.Controls.Add(this.txtProductoName);
+            this.groupBox6.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.groupBox6.Location = new System.Drawing.Point(26, 24);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(405, 251);
+            this.groupBox6.TabIndex = 28;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Agregar producto";
+            // 
+            // label8
+            // 
+            this.label8.BackColor = System.Drawing.Color.White;
+            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label8.Location = new System.Drawing.Point(6, 98);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(119, 49);
+            this.label8.TabIndex = 33;
+            this.label8.Text = "Nombre:";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label9
+            // 
+            this.label9.BackColor = System.Drawing.Color.White;
+            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label9.Location = new System.Drawing.Point(6, 33);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(119, 49);
+            this.label9.TabIndex = 29;
+            this.label9.Text = "Negocio:";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // buttonAgregarProd
+            // 
+            this.buttonAgregarProd.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.buttonAgregarProd.Location = new System.Drawing.Point(183, 171);
+            this.buttonAgregarProd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonAgregarProd.Name = "buttonAgregarProd";
+            this.buttonAgregarProd.Size = new System.Drawing.Size(195, 45);
+            this.buttonAgregarProd.TabIndex = 28;
+            this.buttonAgregarProd.Text = "Agregar producto";
+            this.buttonAgregarProd.UseVisualStyleBackColor = true;
+            this.buttonAgregarProd.Click += new System.EventHandler(this.buttonAgregarProd_Click);
+            // 
+            // txtProductoName
+            // 
+            this.txtProductoName.Location = new System.Drawing.Point(142, 110);
+            this.txtProductoName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtProductoName.MaxLength = 25;
+            this.txtProductoName.Name = "txtProductoName";
+            this.txtProductoName.Size = new System.Drawing.Size(236, 30);
+            this.txtProductoName.TabIndex = 27;
+            // 
+            // cmbNegAddProd
+            // 
+            this.cmbNegAddProd.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbNegAddProd.FormattingEnabled = true;
+            this.cmbNegAddProd.Location = new System.Drawing.Point(142, 45);
+            this.cmbNegAddProd.Name = "cmbNegAddProd";
+            this.cmbNegAddProd.Size = new System.Drawing.Size(236, 31);
+            this.cmbNegAddProd.TabIndex = 34;
+            // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -471,6 +620,7 @@ namespace Parcial02
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -479,6 +629,10 @@ namespace Parcial02
             this.groupBox3.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize) (this.dataGridViewProducts)).EndInit();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
             this.ResumeLayout(false);
         }
 
@@ -516,5 +670,16 @@ namespace Parcial02
         private System.Windows.Forms.Button buttonNegocioDelete;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.DataGridView dataGridViewNegocios;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.ComboBox cmbNegAddProd;
+        private System.Windows.Forms.TextBox txtProductoName;
+        private System.Windows.Forms.Button buttonAgregarProd;
+        private System.Windows.Forms.ComboBox cmbProdDelete;
+        private System.Windows.Forms.Button buttonDeleteProd;
+        private System.Windows.Forms.DataGridView dataGridViewProducts;
     }
 }

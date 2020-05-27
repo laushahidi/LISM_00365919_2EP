@@ -26,6 +26,7 @@
       <e p="Parcial02.csproj" t="IncludeRecursive" />
       <e p="Parcial02.sln" t="IncludeFlat" />
       <e p="Producto.cs" t="Include" />
+      <e p="ProductosConsulta.cs" t="Include" />
       <e p="Program.cs" t="Include" />
       <e p="Properties" t="Include">
         <e p="AssemblyInfo.cs" t="Include" />
