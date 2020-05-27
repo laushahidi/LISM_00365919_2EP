@@ -126,6 +126,7 @@
           <DependentUpon>MenuPrincipal.cs</DependentUpon>
         </Compile>
         <Compile Include="Negocio.cs" />
+        <Compile Include="NegociosConsulta.cs" />
         <Compile Include="Orden.cs" />
         <Compile Include="Producto.cs" />
         <Compile Include="Program.cs" />

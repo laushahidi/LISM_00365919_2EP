@@ -35,6 +35,20 @@ namespace Parcial02
             cmbUserDelete.DisplayMember = "username";
             cmbUserDelete.DataSource = UsuariosConsulta.getLista();
         }
+        private void actualizarControlesB()
+        {
+
+            List<Negocio> lista = NegociosConsulta.getLista();
+
+            dataGridViewNegocios.DataSource = null;
+            dataGridViewNegocios.DataSource = lista;
+            
+            cmbNegociosDelete.DataSource = null;
+            cmbNegociosDelete.ValueMember = "idBusiness";
+            cmbNegociosDelete.DisplayMember = "name";
+            cmbNegociosDelete.DataSource = NegociosConsulta.getLista();
+        }
+        
         private void MenuPrincipal_Load(object sender, EventArgs e)
         {
             //bienvenidoLabel.Text =
@@ -121,6 +135,51 @@ namespace Parcial02
 
                 actualizarControles();
             }
+        }
+
+        private void buttonAddNegocio_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtNegocioName.Text.Length >= 3)
+                {
+                    NegociosConsulta.agregarNegocio(txtNegocioName.Text, txtNegocioDesc.Text);
+
+                    MessageBox.Show("¡Negocio agregado exitosamente!",
+                        "Hugo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    txtNegocioName.Clear();
+                    txtNegocioDesc.Clear();
+                    actualizarControlesB();
+                }
+                else
+                    MessageBox.Show("Por favor digite un negocio valido (longitud minima, 3 caracteres)",
+                        "Hugo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("El negocio que ha digitado, no se encuentra disponible.",
+                    "Hugo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void buttonNegocioDelete_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Seguro que desea eliminar el negocio " + cmbUserDelete.Text + "?",
+                "Hugo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                NegociosConsulta.eliminarNegocio(cmbNegociosDelete.Text);
+
+                MessageBox.Show("¡Negocio eliminado exitosamente!",
+                    "Hugo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                actualizarControlesB();
+            }
+        }
+
+        private void txtNegocioDesc_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter) buttonAddNegocio_Click(sender, e);
         }
     }
 }

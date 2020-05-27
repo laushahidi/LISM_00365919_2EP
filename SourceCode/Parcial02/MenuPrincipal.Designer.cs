@@ -52,11 +52,26 @@ namespace Parcial02
             this.label3 = new System.Windows.Forms.Label();
             this.cmbUserDelete = new System.Windows.Forms.ComboBox();
             this.buttonEliminar = new System.Windows.Forms.Button();
+            this.dataGridViewNegocios = new System.Windows.Forms.DataGridView();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.buttonNegocioDelete = new System.Windows.Forms.Button();
+            this.cmbNegociosDelete = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtNegocioName = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.buttonAddNegocio = new System.Windows.Forms.Button();
+            this.txtNegocioDesc = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize) (this.dataGridViewUsers)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.dataGridViewNegocios)).BeginInit();
+            this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -90,10 +105,13 @@ namespace Parcial02
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.dataGridViewNegocios);
+            this.tabPage2.Controls.Add(this.groupBox3);
+            this.tabPage2.Controls.Add(this.groupBox4);
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(792, 529);
+            this.tabPage2.Size = new System.Drawing.Size(904, 561);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Mantenimiento negocios";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -303,6 +321,138 @@ namespace Parcial02
             this.buttonEliminar.UseVisualStyleBackColor = true;
             this.buttonEliminar.Click += new System.EventHandler(this.buttonEliminar_Click);
             // 
+            // dataGridViewNegocios
+            // 
+            this.dataGridViewNegocios.AllowUserToAddRows = false;
+            this.dataGridViewNegocios.AllowUserToDeleteRows = false;
+            this.dataGridViewNegocios.ColumnHeadersHeightSizeMode =
+                System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewNegocios.Location = new System.Drawing.Point(43, 301);
+            this.dataGridViewNegocios.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridViewNegocios.Name = "dataGridViewNegocios";
+            this.dataGridViewNegocios.ReadOnly = true;
+            this.dataGridViewNegocios.RowTemplate.Height = 24;
+            this.dataGridViewNegocios.Size = new System.Drawing.Size(820, 235);
+            this.dataGridViewNegocios.TabIndex = 27;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.buttonNegocioDelete);
+            this.groupBox3.Controls.Add(this.cmbNegociosDelete);
+            this.groupBox3.Controls.Add(this.label4);
+            this.groupBox3.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.groupBox3.Location = new System.Drawing.Point(473, 24);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(406, 251);
+            this.groupBox3.TabIndex = 26;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Eliminar negocio";
+            // 
+            // buttonNegocioDelete
+            // 
+            this.buttonNegocioDelete.ForeColor = System.Drawing.Color.Red;
+            this.buttonNegocioDelete.Location = new System.Drawing.Point(193, 171);
+            this.buttonNegocioDelete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonNegocioDelete.Name = "buttonNegocioDelete";
+            this.buttonNegocioDelete.Size = new System.Drawing.Size(163, 45);
+            this.buttonNegocioDelete.TabIndex = 32;
+            this.buttonNegocioDelete.Text = "Eliminar";
+            this.buttonNegocioDelete.UseVisualStyleBackColor = true;
+            this.buttonNegocioDelete.Click += new System.EventHandler(this.buttonNegocioDelete_Click);
+            // 
+            // cmbNegociosDelete
+            // 
+            this.cmbNegociosDelete.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbNegociosDelete.FormattingEnabled = true;
+            this.cmbNegociosDelete.Location = new System.Drawing.Point(158, 43);
+            this.cmbNegociosDelete.Name = "cmbNegociosDelete";
+            this.cmbNegociosDelete.Size = new System.Drawing.Size(198, 31);
+            this.cmbNegociosDelete.TabIndex = 31;
+            // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.Color.White;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label4.Location = new System.Drawing.Point(19, 33);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(119, 49);
+            this.label4.TabIndex = 30;
+            this.label4.Text = "Negocio:";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.label5);
+            this.groupBox4.Controls.Add(this.txtNegocioName);
+            this.groupBox4.Controls.Add(this.label6);
+            this.groupBox4.Controls.Add(this.buttonAddNegocio);
+            this.groupBox4.Controls.Add(this.txtNegocioDesc);
+            this.groupBox4.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.groupBox4.Location = new System.Drawing.Point(26, 24);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(405, 251);
+            this.groupBox4.TabIndex = 25;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Agregar negocio";
+            // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.Color.White;
+            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label5.Location = new System.Drawing.Point(3, 33);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(119, 49);
+            this.label5.TabIndex = 33;
+            this.label5.Text = "Nombre:";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtNegocioName
+            // 
+            this.txtNegocioName.Location = new System.Drawing.Point(142, 45);
+            this.txtNegocioName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtNegocioName.MaxLength = 25;
+            this.txtNegocioName.Name = "txtNegocioName";
+            this.txtNegocioName.Size = new System.Drawing.Size(236, 30);
+            this.txtNegocioName.TabIndex = 32;
+            // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.Color.White;
+            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label6.Location = new System.Drawing.Point(3, 98);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(119, 49);
+            this.label6.TabIndex = 29;
+            this.label6.Text = "Descripcion:";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // buttonAddNegocio
+            // 
+            this.buttonAddNegocio.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.buttonAddNegocio.Location = new System.Drawing.Point(211, 171);
+            this.buttonAddNegocio.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonAddNegocio.Name = "buttonAddNegocio";
+            this.buttonAddNegocio.Size = new System.Drawing.Size(167, 45);
+            this.buttonAddNegocio.TabIndex = 28;
+            this.buttonAddNegocio.Text = "Agregar negocio";
+            this.buttonAddNegocio.UseVisualStyleBackColor = true;
+            this.buttonAddNegocio.Click += new System.EventHandler(this.buttonAddNegocio_Click);
+            // 
+            // txtNegocioDesc
+            // 
+            this.txtNegocioDesc.Location = new System.Drawing.Point(142, 110);
+            this.txtNegocioDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtNegocioDesc.MaxLength = 25;
+            this.txtNegocioDesc.Name = "txtNegocioDesc";
+            this.txtNegocioDesc.Size = new System.Drawing.Size(236, 30);
+            this.txtNegocioDesc.TabIndex = 27;
+            this.txtNegocioDesc.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNegocioDesc_KeyDown);
+            // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -317,10 +467,15 @@ namespace Parcial02
             this.Load += new System.EventHandler(this.MenuPrincipal_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize) (this.dataGridViewUsers)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.dataGridViewNegocios)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
         }
 
@@ -347,5 +502,16 @@ namespace Parcial02
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cmbUserDelete;
         private System.Windows.Forms.Button buttonEliminar;
+        private System.Windows.Forms.TextBox txtNegocioDesc;
+        private System.Windows.Forms.Button buttonAddNegocio;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtNegocioName;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox cmbNegociosDelete;
+        private System.Windows.Forms.Button buttonNegocioDelete;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.DataGridView dataGridViewNegocios;
     }
 }
