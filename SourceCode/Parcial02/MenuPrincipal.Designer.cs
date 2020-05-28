@@ -77,6 +77,21 @@ namespace Parcial02
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.dataGridViewAllOrders = new System.Windows.Forms.DataGridView();
+            this.dataGridViewMyAddresses = new System.Windows.Forms.DataGridView();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.cmbAddressMod = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtAddAddress = new System.Windows.Forms.TextBox();
+            this.buttonAddAddress = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtModAddress = new System.Windows.Forms.TextBox();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.buttonModAddress = new System.Windows.Forms.Button();
+            this.cmbDeleteAddress = new System.Windows.Forms.ComboBox();
+            this.buttonDeleteAddress = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize) (this.dataGridViewUsers)).BeginInit();
@@ -91,7 +106,12 @@ namespace Parcial02
             this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.tabPage4.SuspendLayout();
+            this.tabPage7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize) (this.dataGridViewAllOrders)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.dataGridViewMyAddresses)).BeginInit();
+            this.groupBox7.SuspendLayout();
+            this.groupBox8.SuspendLayout();
+            this.groupBox9.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -290,11 +310,11 @@ namespace Parcial02
             this.tabPage2.Controls.Add(this.dataGridViewNegocios);
             this.tabPage2.Controls.Add(this.groupBox3);
             this.tabPage2.Controls.Add(this.groupBox4);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage2.Size = new System.Drawing.Size(904, 565);
+            this.tabPage2.Size = new System.Drawing.Size(904, 561);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Mantenimiento negocios";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -612,22 +632,26 @@ namespace Parcial02
             // 
             // tabPage6
             // 
-            this.tabPage6.Location = new System.Drawing.Point(4, 25);
+            this.tabPage6.Location = new System.Drawing.Point(4, 29);
             this.tabPage6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage6.Size = new System.Drawing.Size(904, 565);
+            this.tabPage6.Size = new System.Drawing.Size(904, 561);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "Ordenes";
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
             // tabPage7
             // 
-            this.tabPage7.Location = new System.Drawing.Point(4, 25);
+            this.tabPage7.Controls.Add(this.groupBox9);
+            this.tabPage7.Controls.Add(this.dataGridViewMyAddresses);
+            this.tabPage7.Controls.Add(this.groupBox7);
+            this.tabPage7.Controls.Add(this.groupBox8);
+            this.tabPage7.Location = new System.Drawing.Point(4, 29);
             this.tabPage7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage7.Size = new System.Drawing.Size(904, 565);
+            this.tabPage7.Size = new System.Drawing.Size(904, 561);
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Text = "Mis direcciones";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -645,6 +669,189 @@ namespace Parcial02
             this.dataGridViewAllOrders.RowTemplate.Height = 24;
             this.dataGridViewAllOrders.Size = new System.Drawing.Size(820, 517);
             this.dataGridViewAllOrders.TabIndex = 31;
+            // 
+            // dataGridViewMyAddresses
+            // 
+            this.dataGridViewMyAddresses.AllowUserToAddRows = false;
+            this.dataGridViewMyAddresses.AllowUserToDeleteRows = false;
+            this.dataGridViewMyAddresses.ColumnHeadersHeightSizeMode =
+                System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewMyAddresses.Location = new System.Drawing.Point(44, 319);
+            this.dataGridViewMyAddresses.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridViewMyAddresses.Name = "dataGridViewMyAddresses";
+            this.dataGridViewMyAddresses.ReadOnly = true;
+            this.dataGridViewMyAddresses.RowTemplate.Height = 24;
+            this.dataGridViewMyAddresses.Size = new System.Drawing.Size(820, 235);
+            this.dataGridViewMyAddresses.TabIndex = 30;
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.cmbAddressMod);
+            this.groupBox7.Controls.Add(this.label12);
+            this.groupBox7.Controls.Add(this.label10);
+            this.groupBox7.Controls.Add(this.txtModAddress);
+            this.groupBox7.Controls.Add(this.buttonModAddress);
+            this.groupBox7.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.groupBox7.Location = new System.Drawing.Point(473, 24);
+            this.groupBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox7.Size = new System.Drawing.Size(406, 278);
+            this.groupBox7.TabIndex = 29;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Modificar direccion";
+            // 
+            // cmbAddressMod
+            // 
+            this.cmbAddressMod.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbAddressMod.FormattingEnabled = true;
+            this.cmbAddressMod.Location = new System.Drawing.Point(158, 42);
+            this.cmbAddressMod.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbAddressMod.Name = "cmbAddressMod";
+            this.cmbAddressMod.Size = new System.Drawing.Size(233, 31);
+            this.cmbAddressMod.TabIndex = 31;
+            // 
+            // label10
+            // 
+            this.label10.BackColor = System.Drawing.Color.White;
+            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label10.Location = new System.Drawing.Point(19, 32);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(119, 67);
+            this.label10.TabIndex = 30;
+            this.label10.Text = "Direccion actual:";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.label11);
+            this.groupBox8.Controls.Add(this.txtAddAddress);
+            this.groupBox8.Controls.Add(this.buttonAddAddress);
+            this.groupBox8.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.groupBox8.Location = new System.Drawing.Point(26, 24);
+            this.groupBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox8.Size = new System.Drawing.Size(405, 129);
+            this.groupBox8.TabIndex = 28;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Agregar direccion";
+            // 
+            // label11
+            // 
+            this.label11.BackColor = System.Drawing.Color.White;
+            this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label11.Location = new System.Drawing.Point(6, 25);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(119, 49);
+            this.label11.TabIndex = 33;
+            this.label11.Text = "Direccion:";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtAddAddress
+            // 
+            this.txtAddAddress.Location = new System.Drawing.Point(142, 37);
+            this.txtAddAddress.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtAddAddress.MaxLength = 25;
+            this.txtAddAddress.Name = "txtAddAddress";
+            this.txtAddAddress.Size = new System.Drawing.Size(236, 30);
+            this.txtAddAddress.TabIndex = 32;
+            // 
+            // buttonAddAddress
+            // 
+            this.buttonAddAddress.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.buttonAddAddress.Location = new System.Drawing.Point(172, 78);
+            this.buttonAddAddress.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonAddAddress.Name = "buttonAddAddress";
+            this.buttonAddAddress.Size = new System.Drawing.Size(206, 45);
+            this.buttonAddAddress.TabIndex = 28;
+            this.buttonAddAddress.Text = "Agregar direccion";
+            this.buttonAddAddress.UseVisualStyleBackColor = true;
+            // 
+            // label12
+            // 
+            this.label12.BackColor = System.Drawing.Color.White;
+            this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label12.Location = new System.Drawing.Point(6, 124);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(133, 67);
+            this.label12.TabIndex = 32;
+            this.label12.Text = "Nueva direccion:";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtModAddress
+            // 
+            this.txtModAddress.Location = new System.Drawing.Point(155, 145);
+            this.txtModAddress.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtModAddress.MaxLength = 25;
+            this.txtModAddress.Name = "txtModAddress";
+            this.txtModAddress.Size = new System.Drawing.Size(236, 30);
+            this.txtModAddress.TabIndex = 31;
+            // 
+            // groupBox9
+            // 
+            this.groupBox9.Controls.Add(this.buttonDeleteAddress);
+            this.groupBox9.Controls.Add(this.cmbDeleteAddress);
+            this.groupBox9.Controls.Add(this.label13);
+            this.groupBox9.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.groupBox9.Location = new System.Drawing.Point(26, 168);
+            this.groupBox9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox9.Size = new System.Drawing.Size(405, 134);
+            this.groupBox9.TabIndex = 34;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "Eliminar direccion";
+            // 
+            // label13
+            // 
+            this.label13.BackColor = System.Drawing.Color.White;
+            this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label13.Location = new System.Drawing.Point(6, 27);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(119, 49);
+            this.label13.TabIndex = 33;
+            this.label13.Text = "Direccion:";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // buttonModAddress
+            // 
+            this.buttonModAddress.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.buttonModAddress.Location = new System.Drawing.Point(185, 220);
+            this.buttonModAddress.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonModAddress.Name = "buttonModAddress";
+            this.buttonModAddress.Size = new System.Drawing.Size(206, 45);
+            this.buttonModAddress.TabIndex = 28;
+            this.buttonModAddress.Text = "Actualizar direccion";
+            this.buttonModAddress.UseVisualStyleBackColor = true;
+            // 
+            // cmbDeleteAddress
+            // 
+            this.cmbDeleteAddress.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbDeleteAddress.FormattingEnabled = true;
+            this.cmbDeleteAddress.Location = new System.Drawing.Point(142, 40);
+            this.cmbDeleteAddress.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbDeleteAddress.Name = "cmbDeleteAddress";
+            this.cmbDeleteAddress.Size = new System.Drawing.Size(236, 31);
+            this.cmbDeleteAddress.TabIndex = 34;
+            // 
+            // buttonDeleteAddress
+            // 
+            this.buttonDeleteAddress.ForeColor = System.Drawing.Color.Red;
+            this.buttonDeleteAddress.Location = new System.Drawing.Point(215, 77);
+            this.buttonDeleteAddress.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonDeleteAddress.Name = "buttonDeleteAddress";
+            this.buttonDeleteAddress.Size = new System.Drawing.Size(163, 46);
+            this.buttonDeleteAddress.TabIndex = 35;
+            this.buttonDeleteAddress.Text = "Eliminar";
+            this.buttonDeleteAddress.UseVisualStyleBackColor = true;
             // 
             // MenuPrincipal
             // 
@@ -676,7 +883,14 @@ namespace Parcial02
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
             this.tabPage4.ResumeLayout(false);
+            this.tabPage7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize) (this.dataGridViewAllOrders)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.dataGridViewMyAddresses)).EndInit();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
+            this.groupBox9.ResumeLayout(false);
             this.ResumeLayout(false);
         }
 
@@ -726,5 +940,20 @@ namespace Parcial02
         private System.Windows.Forms.Button buttonDeleteProd;
         private System.Windows.Forms.DataGridView dataGridViewProducts;
         private System.Windows.Forms.DataGridView dataGridViewAllOrders;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.Button buttonModAddress;
+        private System.Windows.Forms.TextBox txtModAddress;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ComboBox cmbDeleteAddress;
+        private System.Windows.Forms.Button buttonDeleteAddress;
+        private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.Button buttonAddAddress;
+        private System.Windows.Forms.TextBox txtAddAddress;
+        private System.Windows.Forms.ComboBox cmbAddressMod;
+        private System.Windows.Forms.DataGridView dataGridViewMyAddresses;
     }
 }

@@ -11,6 +11,7 @@
       <e p="CambiarContrasena.resx" t="Include" />
       <e p="ConnectionDB.cs" t="Include" />
       <e p="Direccion.cs" t="Include" />
+      <e p="DireccionesConsulta.cs" t="Include" />
       <e p="Form1.cs" t="Include" />
       <e p="Form1.Designer.cs" t="Include" />
       <e p="Form1.resx" t="Include" />

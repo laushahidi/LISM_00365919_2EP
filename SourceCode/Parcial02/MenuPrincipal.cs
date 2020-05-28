@@ -40,6 +40,7 @@ namespace Parcial02
             }
             else
             {
+                actualizarControlesA();
                 tabControl1.TabPages[1].Parent = null;
                 tabControl1.TabPages[1].Parent = null;
                 tabControl1.TabPages.Remove(tabPage1);
@@ -111,6 +112,12 @@ namespace Parcial02
 
             dataGridViewAllOrders.DataSource = null;
             dataGridViewAllOrders.DataSource = OrdenesConsulta.adminVerPedidos();
+        }
+
+        private void actualizarControlesA()
+        {
+            dataGridViewMyAddresses.DataSource = null;
+            dataGridViewMyAddresses.DataSource = DireccionesConsulta.userVerDirecciones(usuario);
         }
 
         private void MenuPrincipal_FormClosing(object sender, FormClosingEventArgs e)
