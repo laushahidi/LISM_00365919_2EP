@@ -170,27 +170,29 @@ namespace Parcial02
         {
             try
             {
-                if (txtNuevoUsername.Text.Length >= 4 && txtNuevoFullname.Text.Length >= 5)
-                {
-                    UsuariosConsulta.crearNuevo(txtNuevoFullname.Text, txtNuevoUsername.Text, AdminRad.Checked);
+                if (txtNuevoUsername.Text.Equals("") || txtNuevoFullname.Text.Equals(""))
+                    throw new ErrorQ();
+                
+                UsuariosConsulta.crearNuevo(txtNuevoFullname.Text, txtNuevoUsername.Text, AdminRad.Checked);
 
-                    MessageBox.Show("¡Usuario agregado exitosamente! Valores por defecto: " +
-                                    "contrasena igual a usuario.",
-                        "Hugo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("¡Usuario agregado exitosamente! Valores por defecto: " +
+                                "contrasena igual a usuario.",
+                    "Hugo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    txtNuevoUsername.Clear();
-                    txtNuevoFullname.Clear();
-                    actualizarControles();
-                }
-                else
-                    MessageBox.Show("Por favor digite el nombre completo y el usuario (longitud minima, nombre 5 y usuario 4 caracteres)",
-                        "Hugo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                txtNuevoUsername.Clear();
+                txtNuevoFullname.Clear();
+                actualizarControles();
+                
+            }
+            catch (ErrorQ)
+            {
+                MessageBox.Show("No se permiten campos vacios", "Hugo", MessageBoxButtons.OK);
             }
             catch (Exception)
             {
-                MessageBox.Show("El usuario que ha digitado, no se encuentra disponible.",
-                    "Hugo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ha ocurrido un error", "Hugo", MessageBoxButtons.OK);
             }
+            
         }
 
         private void buttonEliminar_Click(object sender, EventArgs e)

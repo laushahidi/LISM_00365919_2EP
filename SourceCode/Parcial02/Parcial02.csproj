@@ -114,6 +114,7 @@
         <Compile Include="ConnectionDB.cs" />
         <Compile Include="Direccion.cs" />
         <Compile Include="DireccionesConsulta.cs" />
+        <Compile Include="ErrorQ.cs" />
         <Compile Include="Form1.cs">
             <SubType>Form</SubType>
         </Compile>
