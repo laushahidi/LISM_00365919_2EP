@@ -78,6 +78,7 @@
             // 
             this.passwordLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.passwordLabel.ForeColor = System.Drawing.Color.White;
             this.passwordLabel.Location = new System.Drawing.Point(144, 246);
             this.passwordLabel.Name = "passwordLabel";
             this.passwordLabel.Size = new System.Drawing.Size(218, 71);
@@ -89,6 +90,7 @@
             // 
             this.usuarioLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.usuarioLabel.ForeColor = System.Drawing.Color.White;
             this.usuarioLabel.Location = new System.Drawing.Point(144, 138);
             this.usuarioLabel.Name = "usuarioLabel";
             this.usuarioLabel.Size = new System.Drawing.Size(218, 62);
@@ -113,7 +115,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkViolet;
+            this.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (59)))), ((int) (((byte) (33)))),
+                ((int) (((byte) (94)))));
             this.ClientSize = new System.Drawing.Size(800, 562);
             this.Controls.Add(this.buttonChangePass);
             this.Controls.Add(this.buttonIngresar);

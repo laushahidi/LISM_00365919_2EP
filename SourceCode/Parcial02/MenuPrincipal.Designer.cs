@@ -76,6 +76,7 @@ namespace Parcial02
             this.dataGridViewAllOrders = new System.Windows.Forms.DataGridView();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.buttonDelOrder = new System.Windows.Forms.Button();
             this.cmbNumOrder = new System.Windows.Forms.ComboBox();
@@ -103,7 +104,7 @@ namespace Parcial02
             this.txtAddAddress = new System.Windows.Forms.TextBox();
             this.buttonAddAddress = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize) (this.dataGridViewUsers)).BeginInit();
@@ -120,6 +121,7 @@ namespace Parcial02
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize) (this.dataGridViewAllOrders)).BeginInit();
             this.tabPage6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize) (this.dataGridView1)).BeginInit();
             this.groupBox10.SuspendLayout();
             this.groupBox11.SuspendLayout();
             this.tabPage7.SuspendLayout();
@@ -127,7 +129,7 @@ namespace Parcial02
             ((System.ComponentModel.ISupportInitialize) (this.dataGridViewMyAddresses)).BeginInit();
             this.groupBox7.SuspendLayout();
             this.groupBox8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -182,11 +184,11 @@ namespace Parcial02
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.groupBox2.Location = new System.Drawing.Point(470, 22);
+            this.groupBox2.Location = new System.Drawing.Point(470, 4);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Size = new System.Drawing.Size(406, 251);
+            this.groupBox2.Size = new System.Drawing.Size(406, 269);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Eliminar usuarios";
@@ -236,11 +238,11 @@ namespace Parcial02
             this.groupBox1.Controls.Add(this.txtNuevoUsername);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.groupBox1.Location = new System.Drawing.Point(23, 22);
+            this.groupBox1.Location = new System.Drawing.Point(23, 4);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(405, 251);
+            this.groupBox1.Size = new System.Drawing.Size(405, 269);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Crear usuarios";
@@ -252,18 +254,18 @@ namespace Parcial02
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label2.Location = new System.Drawing.Point(3, 32);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(119, 49);
+            this.label2.Size = new System.Drawing.Size(158, 49);
             this.label2.TabIndex = 33;
             this.label2.Text = "Nombre:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtNuevoFullname
             // 
-            this.txtNuevoFullname.Location = new System.Drawing.Point(142, 45);
+            this.txtNuevoFullname.Location = new System.Drawing.Point(167, 45);
             this.txtNuevoFullname.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNuevoFullname.MaxLength = 25;
             this.txtNuevoFullname.Name = "txtNuevoFullname";
-            this.txtNuevoFullname.Size = new System.Drawing.Size(236, 30);
+            this.txtNuevoFullname.Size = new System.Drawing.Size(211, 30);
             this.txtNuevoFullname.TabIndex = 32;
             // 
             // AdminRad
@@ -295,7 +297,7 @@ namespace Parcial02
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label1.Location = new System.Drawing.Point(3, 71);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 49);
+            this.label1.Size = new System.Drawing.Size(158, 49);
             this.label1.TabIndex = 29;
             this.label1.Text = "Usuario:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -303,10 +305,10 @@ namespace Parcial02
             // buttonCreateUser
             // 
             this.buttonCreateUser.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.buttonCreateUser.Location = new System.Drawing.Point(211, 171);
+            this.buttonCreateUser.Location = new System.Drawing.Point(211, 145);
             this.buttonCreateUser.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonCreateUser.Name = "buttonCreateUser";
-            this.buttonCreateUser.Size = new System.Drawing.Size(167, 45);
+            this.buttonCreateUser.Size = new System.Drawing.Size(167, 87);
             this.buttonCreateUser.TabIndex = 28;
             this.buttonCreateUser.Text = "Crear usuario";
             this.buttonCreateUser.UseVisualStyleBackColor = true;
@@ -314,11 +316,11 @@ namespace Parcial02
             // 
             // txtNuevoUsername
             // 
-            this.txtNuevoUsername.Location = new System.Drawing.Point(142, 82);
+            this.txtNuevoUsername.Location = new System.Drawing.Point(167, 82);
             this.txtNuevoUsername.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNuevoUsername.MaxLength = 25;
             this.txtNuevoUsername.Name = "txtNuevoUsername";
-            this.txtNuevoUsername.Size = new System.Drawing.Size(236, 30);
+            this.txtNuevoUsername.Size = new System.Drawing.Size(211, 30);
             this.txtNuevoUsername.TabIndex = 27;
             // 
             // tabPage2
@@ -326,11 +328,11 @@ namespace Parcial02
             this.tabPage2.Controls.Add(this.dataGridViewNegocios);
             this.tabPage2.Controls.Add(this.groupBox3);
             this.tabPage2.Controls.Add(this.groupBox4);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage2.Size = new System.Drawing.Size(904, 565);
+            this.tabPage2.Size = new System.Drawing.Size(904, 561);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Mantenimiento negocios";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -381,7 +383,7 @@ namespace Parcial02
             // 
             this.cmbNegociosDelete.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbNegociosDelete.FormattingEnabled = true;
-            this.cmbNegociosDelete.Location = new System.Drawing.Point(158, 42);
+            this.cmbNegociosDelete.Location = new System.Drawing.Point(202, 44);
             this.cmbNegociosDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbNegociosDelete.Name = "cmbNegociosDelete";
             this.cmbNegociosDelete.Size = new System.Drawing.Size(198, 31);
@@ -392,9 +394,9 @@ namespace Parcial02
             this.label4.BackColor = System.Drawing.Color.White;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label4.Location = new System.Drawing.Point(19, 32);
+            this.label4.Location = new System.Drawing.Point(15, 33);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(119, 49);
+            this.label4.Size = new System.Drawing.Size(181, 49);
             this.label4.TabIndex = 30;
             this.label4.Text = "Negocio:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -424,18 +426,18 @@ namespace Parcial02
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label5.Location = new System.Drawing.Point(3, 32);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(119, 49);
+            this.label5.Size = new System.Drawing.Size(162, 49);
             this.label5.TabIndex = 33;
             this.label5.Text = "Nombre:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtNegocioName
             // 
-            this.txtNegocioName.Location = new System.Drawing.Point(142, 45);
+            this.txtNegocioName.Location = new System.Drawing.Point(192, 45);
             this.txtNegocioName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNegocioName.MaxLength = 25;
             this.txtNegocioName.Name = "txtNegocioName";
-            this.txtNegocioName.Size = new System.Drawing.Size(236, 30);
+            this.txtNegocioName.Size = new System.Drawing.Size(186, 30);
             this.txtNegocioName.TabIndex = 32;
             // 
             // label6
@@ -445,7 +447,7 @@ namespace Parcial02
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label6.Location = new System.Drawing.Point(3, 98);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(133, 49);
+            this.label6.Size = new System.Drawing.Size(176, 49);
             this.label6.TabIndex = 29;
             this.label6.Text = "Descripcion:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -453,10 +455,10 @@ namespace Parcial02
             // buttonAddNegocio
             // 
             this.buttonAddNegocio.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.buttonAddNegocio.Location = new System.Drawing.Point(211, 171);
+            this.buttonAddNegocio.Location = new System.Drawing.Point(126, 171);
             this.buttonAddNegocio.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonAddNegocio.Name = "buttonAddNegocio";
-            this.buttonAddNegocio.Size = new System.Drawing.Size(167, 45);
+            this.buttonAddNegocio.Size = new System.Drawing.Size(252, 64);
             this.buttonAddNegocio.TabIndex = 28;
             this.buttonAddNegocio.Text = "Agregar negocio";
             this.buttonAddNegocio.UseVisualStyleBackColor = true;
@@ -464,11 +466,11 @@ namespace Parcial02
             // 
             // txtNegocioDesc
             // 
-            this.txtNegocioDesc.Location = new System.Drawing.Point(142, 110);
+            this.txtNegocioDesc.Location = new System.Drawing.Point(192, 110);
             this.txtNegocioDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNegocioDesc.MaxLength = 25;
             this.txtNegocioDesc.Name = "txtNegocioDesc";
-            this.txtNegocioDesc.Size = new System.Drawing.Size(236, 30);
+            this.txtNegocioDesc.Size = new System.Drawing.Size(186, 30);
             this.txtNegocioDesc.TabIndex = 27;
             this.txtNegocioDesc.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNegocioDesc_KeyDown);
             // 
@@ -477,11 +479,11 @@ namespace Parcial02
             this.tabPage3.Controls.Add(this.dataGridViewProducts);
             this.tabPage3.Controls.Add(this.groupBox5);
             this.tabPage3.Controls.Add(this.groupBox6);
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Location = new System.Drawing.Point(4, 29);
             this.tabPage3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage3.Size = new System.Drawing.Size(904, 565);
+            this.tabPage3.Size = new System.Drawing.Size(904, 561);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Mantenimiento productos";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -519,10 +521,10 @@ namespace Parcial02
             // buttonDeleteProd
             // 
             this.buttonDeleteProd.ForeColor = System.Drawing.Color.Red;
-            this.buttonDeleteProd.Location = new System.Drawing.Point(193, 171);
+            this.buttonDeleteProd.Location = new System.Drawing.Point(193, 160);
             this.buttonDeleteProd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonDeleteProd.Name = "buttonDeleteProd";
-            this.buttonDeleteProd.Size = new System.Drawing.Size(163, 45);
+            this.buttonDeleteProd.Size = new System.Drawing.Size(163, 56);
             this.buttonDeleteProd.TabIndex = 32;
             this.buttonDeleteProd.Text = "Eliminar";
             this.buttonDeleteProd.UseVisualStyleBackColor = true;
@@ -532,7 +534,7 @@ namespace Parcial02
             // 
             this.cmbProdDelete.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbProdDelete.FormattingEnabled = true;
-            this.cmbProdDelete.Location = new System.Drawing.Point(158, 42);
+            this.cmbProdDelete.Location = new System.Drawing.Point(192, 44);
             this.cmbProdDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbProdDelete.Name = "cmbProdDelete";
             this.cmbProdDelete.Size = new System.Drawing.Size(198, 31);
@@ -545,7 +547,7 @@ namespace Parcial02
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label7.Location = new System.Drawing.Point(19, 32);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(119, 49);
+            this.label7.Size = new System.Drawing.Size(153, 49);
             this.label7.TabIndex = 30;
             this.label7.Text = "Producto:";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -572,10 +574,10 @@ namespace Parcial02
             // 
             this.cmbNegAddProd.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbNegAddProd.FormattingEnabled = true;
-            this.cmbNegAddProd.Location = new System.Drawing.Point(142, 45);
+            this.cmbNegAddProd.Location = new System.Drawing.Point(183, 45);
             this.cmbNegAddProd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbNegAddProd.Name = "cmbNegAddProd";
-            this.cmbNegAddProd.Size = new System.Drawing.Size(236, 31);
+            this.cmbNegAddProd.Size = new System.Drawing.Size(195, 31);
             this.cmbNegAddProd.TabIndex = 34;
             // 
             // label8
@@ -585,7 +587,7 @@ namespace Parcial02
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label8.Location = new System.Drawing.Point(6, 98);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(119, 49);
+            this.label8.Size = new System.Drawing.Size(171, 49);
             this.label8.TabIndex = 33;
             this.label8.Text = "Nombre:";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -597,7 +599,7 @@ namespace Parcial02
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label9.Location = new System.Drawing.Point(6, 32);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(119, 49);
+            this.label9.Size = new System.Drawing.Size(171, 49);
             this.label9.TabIndex = 29;
             this.label9.Text = "Negocio:";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -605,10 +607,10 @@ namespace Parcial02
             // buttonAgregarProd
             // 
             this.buttonAgregarProd.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.buttonAgregarProd.Location = new System.Drawing.Point(183, 171);
+            this.buttonAgregarProd.Location = new System.Drawing.Point(53, 171);
             this.buttonAgregarProd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonAgregarProd.Name = "buttonAgregarProd";
-            this.buttonAgregarProd.Size = new System.Drawing.Size(195, 45);
+            this.buttonAgregarProd.Size = new System.Drawing.Size(325, 45);
             this.buttonAgregarProd.TabIndex = 28;
             this.buttonAgregarProd.Text = "Agregar producto";
             this.buttonAgregarProd.UseVisualStyleBackColor = true;
@@ -616,11 +618,11 @@ namespace Parcial02
             // 
             // txtProductoName
             // 
-            this.txtProductoName.Location = new System.Drawing.Point(142, 110);
+            this.txtProductoName.Location = new System.Drawing.Point(183, 110);
             this.txtProductoName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtProductoName.MaxLength = 25;
             this.txtProductoName.Name = "txtProductoName";
-            this.txtProductoName.Size = new System.Drawing.Size(236, 30);
+            this.txtProductoName.Size = new System.Drawing.Size(195, 30);
             this.txtProductoName.TabIndex = 27;
             // 
             // tabPage4
@@ -674,6 +676,20 @@ namespace Parcial02
             this.tabPage6.Text = "Ordenes";
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode =
+                System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(32, 298);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(820, 235);
+            this.dataGridView1.TabIndex = 33;
+            // 
             // groupBox10
             // 
             this.groupBox10.Controls.Add(this.buttonDelOrder);
@@ -681,11 +697,11 @@ namespace Parcial02
             this.groupBox10.Controls.Add(this.label14);
             this.groupBox10.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.groupBox10.Location = new System.Drawing.Point(473, 24);
+            this.groupBox10.Location = new System.Drawing.Point(473, 4);
             this.groupBox10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox10.Name = "groupBox10";
             this.groupBox10.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox10.Size = new System.Drawing.Size(406, 251);
+            this.groupBox10.Size = new System.Drawing.Size(406, 271);
             this.groupBox10.TabIndex = 32;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Eliminar orden";
@@ -719,7 +735,7 @@ namespace Parcial02
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label14.Location = new System.Drawing.Point(19, 32);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(119, 49);
+            this.label14.Size = new System.Drawing.Size(133, 49);
             this.label14.TabIndex = 30;
             this.label14.Text = "Orden #:";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -733,11 +749,11 @@ namespace Parcial02
             this.groupBox11.Controls.Add(this.buttonAddOrder);
             this.groupBox11.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.groupBox11.Location = new System.Drawing.Point(26, 24);
+            this.groupBox11.Location = new System.Drawing.Point(26, 4);
             this.groupBox11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox11.Name = "groupBox11";
             this.groupBox11.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox11.Size = new System.Drawing.Size(405, 251);
+            this.groupBox11.Size = new System.Drawing.Size(405, 271);
             this.groupBox11.TabIndex = 31;
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "Crear orden";
@@ -746,20 +762,20 @@ namespace Parcial02
             // 
             this.cmbAddressOrder.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbAddressOrder.FormattingEnabled = true;
-            this.cmbAddressOrder.Location = new System.Drawing.Point(142, 110);
+            this.cmbAddressOrder.Location = new System.Drawing.Point(182, 110);
             this.cmbAddressOrder.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbAddressOrder.Name = "cmbAddressOrder";
-            this.cmbAddressOrder.Size = new System.Drawing.Size(236, 31);
+            this.cmbAddressOrder.Size = new System.Drawing.Size(196, 31);
             this.cmbAddressOrder.TabIndex = 35;
             // 
             // cmbProdOrden
             // 
             this.cmbProdOrden.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbProdOrden.FormattingEnabled = true;
-            this.cmbProdOrden.Location = new System.Drawing.Point(142, 45);
+            this.cmbProdOrden.Location = new System.Drawing.Point(182, 45);
             this.cmbProdOrden.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbProdOrden.Name = "cmbProdOrden";
-            this.cmbProdOrden.Size = new System.Drawing.Size(236, 31);
+            this.cmbProdOrden.Size = new System.Drawing.Size(196, 31);
             this.cmbProdOrden.TabIndex = 34;
             // 
             // label15
@@ -769,7 +785,7 @@ namespace Parcial02
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label15.Location = new System.Drawing.Point(6, 98);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(119, 49);
+            this.label15.Size = new System.Drawing.Size(170, 69);
             this.label15.TabIndex = 33;
             this.label15.Text = "Direccion:";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -781,7 +797,7 @@ namespace Parcial02
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label16.Location = new System.Drawing.Point(6, 32);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(119, 49);
+            this.label16.Size = new System.Drawing.Size(170, 69);
             this.label16.TabIndex = 29;
             this.label16.Text = "Producto:";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -789,10 +805,10 @@ namespace Parcial02
             // buttonAddOrder
             // 
             this.buttonAddOrder.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.buttonAddOrder.Location = new System.Drawing.Point(183, 171);
+            this.buttonAddOrder.Location = new System.Drawing.Point(91, 171);
             this.buttonAddOrder.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonAddOrder.Name = "buttonAddOrder";
-            this.buttonAddOrder.Size = new System.Drawing.Size(195, 45);
+            this.buttonAddOrder.Size = new System.Drawing.Size(287, 45);
             this.buttonAddOrder.TabIndex = 28;
             this.buttonAddOrder.Text = "Crear orden";
             this.buttonAddOrder.UseVisualStyleBackColor = true;
@@ -804,11 +820,11 @@ namespace Parcial02
             this.tabPage7.Controls.Add(this.dataGridViewMyAddresses);
             this.tabPage7.Controls.Add(this.groupBox7);
             this.tabPage7.Controls.Add(this.groupBox8);
-            this.tabPage7.Location = new System.Drawing.Point(4, 25);
+            this.tabPage7.Location = new System.Drawing.Point(4, 29);
             this.tabPage7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage7.Size = new System.Drawing.Size(904, 565);
+            this.tabPage7.Size = new System.Drawing.Size(904, 561);
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Text = "Mis direcciones";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -832,10 +848,10 @@ namespace Parcial02
             // buttonDeleteAddress
             // 
             this.buttonDeleteAddress.ForeColor = System.Drawing.Color.Red;
-            this.buttonDeleteAddress.Location = new System.Drawing.Point(215, 101);
+            this.buttonDeleteAddress.Location = new System.Drawing.Point(187, 90);
             this.buttonDeleteAddress.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonDeleteAddress.Name = "buttonDeleteAddress";
-            this.buttonDeleteAddress.Size = new System.Drawing.Size(163, 39);
+            this.buttonDeleteAddress.Size = new System.Drawing.Size(191, 50);
             this.buttonDeleteAddress.TabIndex = 35;
             this.buttonDeleteAddress.Text = "Eliminar";
             this.buttonDeleteAddress.UseVisualStyleBackColor = true;
@@ -845,10 +861,10 @@ namespace Parcial02
             // 
             this.cmbDeleteAddress.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDeleteAddress.FormattingEnabled = true;
-            this.cmbDeleteAddress.Location = new System.Drawing.Point(142, 39);
+            this.cmbDeleteAddress.Location = new System.Drawing.Point(172, 39);
             this.cmbDeleteAddress.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbDeleteAddress.Name = "cmbDeleteAddress";
-            this.cmbDeleteAddress.Size = new System.Drawing.Size(236, 31);
+            this.cmbDeleteAddress.Size = new System.Drawing.Size(206, 31);
             this.cmbDeleteAddress.TabIndex = 34;
             // 
             // label13
@@ -858,7 +874,7 @@ namespace Parcial02
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label13.Location = new System.Drawing.Point(6, 28);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(119, 49);
+            this.label13.Size = new System.Drawing.Size(147, 49);
             this.label13.TabIndex = 33;
             this.label13.Text = "Direccion:";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -899,10 +915,10 @@ namespace Parcial02
             // 
             this.cmbAddressMod.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbAddressMod.FormattingEnabled = true;
-            this.cmbAddressMod.Location = new System.Drawing.Point(158, 42);
+            this.cmbAddressMod.Location = new System.Drawing.Point(185, 42);
             this.cmbAddressMod.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbAddressMod.Name = "cmbAddressMod";
-            this.cmbAddressMod.Size = new System.Drawing.Size(233, 31);
+            this.cmbAddressMod.Size = new System.Drawing.Size(206, 31);
             this.cmbAddressMod.TabIndex = 31;
             // 
             // label12
@@ -912,7 +928,7 @@ namespace Parcial02
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label12.Location = new System.Drawing.Point(6, 124);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(133, 68);
+            this.label12.Size = new System.Drawing.Size(173, 84);
             this.label12.TabIndex = 32;
             this.label12.Text = "Nueva direccion:";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -924,27 +940,27 @@ namespace Parcial02
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label10.Location = new System.Drawing.Point(19, 32);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(119, 68);
+            this.label10.Size = new System.Drawing.Size(159, 84);
             this.label10.TabIndex = 30;
             this.label10.Text = "Direccion actual:";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtModAddress
             // 
-            this.txtModAddress.Location = new System.Drawing.Point(155, 145);
+            this.txtModAddress.Location = new System.Drawing.Point(185, 138);
             this.txtModAddress.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtModAddress.MaxLength = 25;
             this.txtModAddress.Name = "txtModAddress";
-            this.txtModAddress.Size = new System.Drawing.Size(236, 30);
+            this.txtModAddress.Size = new System.Drawing.Size(206, 30);
             this.txtModAddress.TabIndex = 31;
             // 
             // buttonModAddress
             // 
             this.buttonModAddress.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.buttonModAddress.Location = new System.Drawing.Point(185, 220);
+            this.buttonModAddress.Location = new System.Drawing.Point(75, 202);
             this.buttonModAddress.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonModAddress.Name = "buttonModAddress";
-            this.buttonModAddress.Size = new System.Drawing.Size(206, 45);
+            this.buttonModAddress.Size = new System.Drawing.Size(316, 63);
             this.buttonModAddress.TabIndex = 28;
             this.buttonModAddress.Text = "Actualizar direccion";
             this.buttonModAddress.UseVisualStyleBackColor = true;
@@ -973,27 +989,27 @@ namespace Parcial02
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label11.Location = new System.Drawing.Point(6, 25);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(119, 49);
+            this.label11.Size = new System.Drawing.Size(147, 49);
             this.label11.TabIndex = 33;
             this.label11.Text = "Direccion:";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtAddAddress
             // 
-            this.txtAddAddress.Location = new System.Drawing.Point(142, 38);
+            this.txtAddAddress.Location = new System.Drawing.Point(172, 38);
             this.txtAddAddress.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtAddAddress.MaxLength = 25;
             this.txtAddAddress.Name = "txtAddAddress";
-            this.txtAddAddress.Size = new System.Drawing.Size(236, 30);
+            this.txtAddAddress.Size = new System.Drawing.Size(206, 30);
             this.txtAddAddress.TabIndex = 32;
             // 
             // buttonAddAddress
             // 
             this.buttonAddAddress.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.buttonAddAddress.Location = new System.Drawing.Point(172, 78);
+            this.buttonAddAddress.Location = new System.Drawing.Point(86, 78);
             this.buttonAddAddress.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonAddAddress.Name = "buttonAddAddress";
-            this.buttonAddAddress.Size = new System.Drawing.Size(206, 45);
+            this.buttonAddAddress.Size = new System.Drawing.Size(292, 45);
             this.buttonAddAddress.TabIndex = 28;
             this.buttonAddAddress.Text = "Agregar direccion";
             this.buttonAddAddress.UseVisualStyleBackColor = true;
@@ -1001,33 +1017,36 @@ namespace Parcial02
             // 
             // label17
             // 
-            this.label17.BackColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(195, 20);
+            this.label17.BackColor = System.Drawing.Color.Black;
+            this.label17.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label17.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.label17.ForeColor = System.Drawing.Color.White;
+            this.label17.Location = new System.Drawing.Point(83, 9);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(476, 36);
-            this.label17.TabIndex = 1;
+            this.label17.Size = new System.Drawing.Size(682, 49);
+            this.label17.TabIndex = 31;
             this.label17.Text = "label17";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // dataGridView1
+            // pictureBox2
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode =
-                System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(32, 297);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(820, 235);
-            this.dataGridView1.TabIndex = 33;
+            this.pictureBox2.Image = ((System.Drawing.Image) (resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(789, 6);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(111, 60);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 32;
+            this.pictureBox2.TabStop = false;
             // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
+            this.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (59)))), ((int) (((byte) (33)))),
+                ((int) (((byte) (94)))));
             this.ClientSize = new System.Drawing.Size(912, 664);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.tabControl1);
             this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
@@ -1056,6 +1075,7 @@ namespace Parcial02
             this.tabPage4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize) (this.dataGridViewAllOrders)).EndInit();
             this.tabPage6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize) (this.dataGridView1)).EndInit();
             this.groupBox10.ResumeLayout(false);
             this.groupBox11.ResumeLayout(false);
             this.tabPage7.ResumeLayout(false);
@@ -1065,7 +1085,7 @@ namespace Parcial02
             this.groupBox7.PerformLayout();
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
         }
 
@@ -1142,5 +1162,6 @@ namespace Parcial02
         private System.Windows.Forms.Button buttonDelOrder;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

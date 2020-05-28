@@ -59,6 +59,7 @@ namespace Parcial02
             // 
             // label4
             // 
+            this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(343, 286);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(144, 36);
@@ -68,7 +69,7 @@ namespace Parcial02
             // 
             // txtNueva
             // 
-            this.txtNueva.Location = new System.Drawing.Point(494, 243);
+            this.txtNueva.Location = new System.Drawing.Point(494, 242);
             this.txtNueva.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNueva.MaxLength = 25;
             this.txtNueva.Name = "txtNueva";
@@ -78,7 +79,8 @@ namespace Parcial02
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(343, 247);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(343, 248);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(144, 36);
             this.label3.TabIndex = 22;
@@ -87,7 +89,7 @@ namespace Parcial02
             // 
             // buttonCancelar
             // 
-            this.buttonCancelar.Location = new System.Drawing.Point(523, 353);
+            this.buttonCancelar.Location = new System.Drawing.Point(523, 352);
             this.buttonCancelar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(147, 36);
@@ -98,7 +100,7 @@ namespace Parcial02
             // 
             // buttonCambiarContra
             // 
-            this.buttonCambiarContra.Location = new System.Drawing.Point(343, 353);
+            this.buttonCambiarContra.Location = new System.Drawing.Point(343, 352);
             this.buttonCambiarContra.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonCambiarContra.Name = "buttonCambiarContra";
             this.buttonCambiarContra.Size = new System.Drawing.Size(171, 36);
@@ -120,6 +122,7 @@ namespace Parcial02
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(343, 209);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(144, 36);
@@ -139,6 +142,7 @@ namespace Parcial02
             // 
             // label1
             // 
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(360, 146);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(119, 36);
@@ -150,6 +154,7 @@ namespace Parcial02
             // 
             this.pictureBox1.Image = ((System.Drawing.Image) (resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(46, 119);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(233, 269);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -160,7 +165,8 @@ namespace Parcial02
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (59)))), ((int) (((byte) (33)))),
+                ((int) (((byte) (94)))));
             this.ClientSize = new System.Drawing.Size(800, 562);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.cmbUsuario1);
