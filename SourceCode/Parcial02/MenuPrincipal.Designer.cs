@@ -832,6 +832,7 @@ namespace Parcial02
             this.buttonModAddress.TabIndex = 28;
             this.buttonModAddress.Text = "Actualizar direccion";
             this.buttonModAddress.UseVisualStyleBackColor = true;
+            this.buttonModAddress.Click += new System.EventHandler(this.buttonModAddress_Click);
             // 
             // cmbDeleteAddress
             // 
@@ -853,6 +854,7 @@ namespace Parcial02
             this.buttonDeleteAddress.TabIndex = 35;
             this.buttonDeleteAddress.Text = "Eliminar";
             this.buttonDeleteAddress.UseVisualStyleBackColor = true;
+            this.buttonDeleteAddress.Click += new System.EventHandler(this.buttonDeleteAddress_Click);
             // 
             // MenuPrincipal
             // 

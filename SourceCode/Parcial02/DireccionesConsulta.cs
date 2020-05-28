@@ -52,5 +52,23 @@ namespace Parcial02
             
             ConnectionDB.ExecuteNonQuery(sql);
         }
+        
+        public static void eliminarDireccion(string address)
+        {
+            string sql = String.Format(
+                "delete from address where address = '{0}';",
+                address);
+                    
+            ConnectionDB.ExecuteNonQuery(sql);
+        }
+        
+        public static void ActualizarDireccion(string old, string newD)
+        {
+            string sql = String.Format(
+                "update address set address = '{0}' WHERE address = '{1}';",
+                newD, old);
+            
+            ConnectionDB.ExecuteNonQuery(sql);
+        }
     }
 }

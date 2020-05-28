@@ -300,7 +300,47 @@ namespace Parcial02
                     "Hugo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        
-        
+
+
+        private void buttonDeleteAddress_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Seguro que desea eliminar la direccion " + cmbDeleteAddress.Text + "?",
+                "Hugo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                DireccionesConsulta.eliminarDireccion(cmbDeleteAddress.Text);
+
+                MessageBox.Show("¡Direccion eliminada exitosamente!",
+                    "Hugo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                actualizarControlesA();
+            }
+        }
+
+        private void buttonModAddress_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtAddAddress.Text.Length >= 6)
+                {
+                    DireccionesConsulta.ActualizarDireccion(cmbAddressMod.Text, txtModAddress.Text);
+
+                    MessageBox.Show("La direccion se ha actualizado de manera exitosa",
+                        "Hugo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    txtModAddress.Clear();
+
+                    actualizarControlesA();
+                }
+                else
+                    MessageBox.Show("Por favor digite una direccion valida (longitud minima, 6 caracteres)",
+                        "Hugo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show("Error: " + exc.Message, "Hugo",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
