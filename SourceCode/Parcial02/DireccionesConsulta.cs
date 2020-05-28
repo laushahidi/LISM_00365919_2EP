@@ -31,7 +31,8 @@ namespace Parcial02
             DataTable dt = null;
             try
             {
-                dt = ConnectionDB.ExecuteQuery(string.Format("SELECT ad.idAddress, ad.address FROM ADDRESS ad, APPUSER us WHERE us.username = '{0}' ", u.username));
+                dt = ConnectionDB.ExecuteQuery(string.Format("SELECT ad.idAddress, ad.idUser, ad.address FROM ADDRESS ad, APPUSER us " + 
+                "WHERE us.username = '{0}' and ad.idUser = us.idUser ", u.username));
 
             }
             catch (Exception)
@@ -40,6 +41,16 @@ namespace Parcial02
             }
 
             return dt;
+        }
+        
+        public static void agregarDireccion(string address, string name)
+        {
+            string sql = String.Format(
+                "INSERT INTO ADDRESS(idUser, address) select us.idUser, '{0}'" +
+                "from appuser us where us.username = '{1}';",
+                address, name);
+            
+            ConnectionDB.ExecuteNonQuery(sql);
         }
     }
 }

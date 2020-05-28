@@ -681,7 +681,7 @@ namespace Parcial02
             this.dataGridViewMyAddresses.Name = "dataGridViewMyAddresses";
             this.dataGridViewMyAddresses.ReadOnly = true;
             this.dataGridViewMyAddresses.RowTemplate.Height = 24;
-            this.dataGridViewMyAddresses.Size = new System.Drawing.Size(820, 235);
+            this.dataGridViewMyAddresses.Size = new System.Drawing.Size(820, 218);
             this.dataGridViewMyAddresses.TabIndex = 30;
             // 
             // groupBox7
@@ -693,7 +693,7 @@ namespace Parcial02
             this.groupBox7.Controls.Add(this.buttonModAddress);
             this.groupBox7.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.groupBox7.Location = new System.Drawing.Point(473, 24);
+            this.groupBox7.Location = new System.Drawing.Point(473, 14);
             this.groupBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -731,11 +731,11 @@ namespace Parcial02
             this.groupBox8.Controls.Add(this.buttonAddAddress);
             this.groupBox8.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.groupBox8.Location = new System.Drawing.Point(26, 24);
+            this.groupBox8.Location = new System.Drawing.Point(26, 14);
             this.groupBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox8.Size = new System.Drawing.Size(405, 129);
+            this.groupBox8.Size = new System.Drawing.Size(405, 134);
             this.groupBox8.TabIndex = 28;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Agregar direccion";
@@ -771,6 +771,7 @@ namespace Parcial02
             this.buttonAddAddress.TabIndex = 28;
             this.buttonAddAddress.Text = "Agregar direccion";
             this.buttonAddAddress.UseVisualStyleBackColor = true;
+            this.buttonAddAddress.Click += new System.EventHandler(this.buttonAddAddress_Click);
             // 
             // label12
             // 
@@ -800,11 +801,11 @@ namespace Parcial02
             this.groupBox9.Controls.Add(this.label13);
             this.groupBox9.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.groupBox9.Location = new System.Drawing.Point(26, 168);
+            this.groupBox9.Location = new System.Drawing.Point(26, 152);
             this.groupBox9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox9.Size = new System.Drawing.Size(405, 134);
+            this.groupBox9.Size = new System.Drawing.Size(405, 150);
             this.groupBox9.TabIndex = 34;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Eliminar direccion";
@@ -836,7 +837,7 @@ namespace Parcial02
             // 
             this.cmbDeleteAddress.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDeleteAddress.FormattingEnabled = true;
-            this.cmbDeleteAddress.Location = new System.Drawing.Point(142, 40);
+            this.cmbDeleteAddress.Location = new System.Drawing.Point(142, 39);
             this.cmbDeleteAddress.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbDeleteAddress.Name = "cmbDeleteAddress";
             this.cmbDeleteAddress.Size = new System.Drawing.Size(236, 31);
@@ -845,10 +846,10 @@ namespace Parcial02
             // buttonDeleteAddress
             // 
             this.buttonDeleteAddress.ForeColor = System.Drawing.Color.Red;
-            this.buttonDeleteAddress.Location = new System.Drawing.Point(215, 77);
+            this.buttonDeleteAddress.Location = new System.Drawing.Point(215, 101);
             this.buttonDeleteAddress.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonDeleteAddress.Name = "buttonDeleteAddress";
-            this.buttonDeleteAddress.Size = new System.Drawing.Size(163, 46);
+            this.buttonDeleteAddress.Size = new System.Drawing.Size(163, 39);
             this.buttonDeleteAddress.TabIndex = 35;
             this.buttonDeleteAddress.Text = "Eliminar";
             this.buttonDeleteAddress.UseVisualStyleBackColor = true;

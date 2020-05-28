@@ -118,19 +118,29 @@ namespace Parcial02
         {
             dataGridViewMyAddresses.DataSource = null;
             dataGridViewMyAddresses.DataSource = DireccionesConsulta.userVerDirecciones(usuario);
+            
+            cmbDeleteAddress.DataSource = null;
+            cmbDeleteAddress.ValueMember = "idaddress";
+            cmbDeleteAddress.DisplayMember = "address";
+            cmbDeleteAddress.DataSource = DireccionesConsulta.getLista(); 
+            
+            cmbAddressMod.DataSource = null;
+            cmbAddressMod.ValueMember = "idaddress";
+            cmbAddressMod.DisplayMember = "address";
+            cmbAddressMod.DataSource = DireccionesConsulta.getLista(); 
         }
 
         private void MenuPrincipal_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (MessageBox.Show("¿Seguro que desea salir, " + usuario.username + "?",
                             "Hugo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
-                    {
-                        e.Cancel = true;
-                    }
-                    else
-                    {
-                        e.Cancel = false;
-                    }
+            {
+                e.Cancel = true;
+            }
+            else
+            {
+                e.Cancel = false;
+            }
         }
 
         private void MenuPrincipal_FormClosed(object sender, FormClosedEventArgs e)
@@ -265,5 +275,32 @@ namespace Parcial02
                 actualizarControlesP();
             }
         }
+
+        private void buttonAddAddress_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtAddAddress.Text.Length >= 6)
+                {
+                    DireccionesConsulta.agregarDireccion(txtAddAddress.Text, usuario.username);
+
+                    MessageBox.Show("¡Direccion agregada exitosamente!",
+                        "Hugo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    txtAddAddress.Clear();
+                    actualizarControlesA();
+                }
+                else
+                    MessageBox.Show("Por favor digite una direccion valida (longitud minima, 6 caracteres)",
+                        "Hugo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ha ocurrido un error.",
+                    "Hugo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        
+        
     }
 }
