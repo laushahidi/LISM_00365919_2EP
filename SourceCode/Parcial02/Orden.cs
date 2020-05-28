@@ -9,17 +9,14 @@ namespace Parcial02
         public DateTime createDate { get; set; }
         public int idProduct { get; set; }
         public int idAddress { get; set; }
-        
 
-        public Orden() {}
-
-        public Orden(int o_idOrden, string o_createDate, int o_idProduct, int o_idAddress)
+        public Orden()
         {
-            idOrden = o_idOrden;
-            createDate = DateTime.ParseExact(o_createDate, "yyyy/MM/dd", CultureInfo.InvariantCulture);
-            idProduct = o_idProduct;
-            idAddress = o_idAddress;
-            
+            idOrden = 0;
+            createDate = new DateTime();
+            idProduct = 0;
+            idAddress = 0;   
         }
+
     }
 }

@@ -24,10 +24,8 @@ namespace Parcial02
         
         private void MenuPrincipal_Load(object sender, EventArgs e)
         {
-            //bienvenidoLabel.Text =
-                            //"Bienvenido " + usuario.usuario + " [" + (usuario.admin ? "Administrador" : "Usuario") + "]";
             
-            //labelClientePedido.Text = usuario.usuario;
+            label17.Text = "Bienvenido " + usuario.username + " [" + (usuario.userType ? "Administrador" : "Usuario") + "]";
             
             if (usuario.userType)
             {
@@ -35,14 +33,15 @@ namespace Parcial02
                 actualizarControles();
                 actualizarControlesB();
                 actualizarControlesP();
-                actualizarControlesO();
-                //configuarGrafico();
+                actualizarControlesAdminO();
+                tabControl1.TabPages.Remove(tabPage6);
+                tabControl1.TabPages.Remove(tabPage7);
+                configuarGrafico();
             }
             else
             {
                 actualizarControlesA();
-                tabControl1.TabPages[1].Parent = null;
-                tabControl1.TabPages[1].Parent = null;
+                ActualizarControlesUserO();
                 tabControl1.TabPages.Remove(tabPage1);
                 tabControl1.TabPages.Remove(tabPage2);
                 tabControl1.TabPages.Remove(tabPage3);
@@ -106,11 +105,8 @@ namespace Parcial02
             cmbNegAddProd.DataSource = NegociosConsulta.getLista(); 
         }
 
-        private void actualizarControlesO()
+        private void actualizarControlesAdminO()
         {
-            List<Orden> lista = OrdenesConsulta.getLista();
-
-            dataGridViewAllOrders.DataSource = null;
             dataGridViewAllOrders.DataSource = OrdenesConsulta.adminVerPedidos();
         }
 
@@ -122,12 +118,34 @@ namespace Parcial02
             cmbDeleteAddress.DataSource = null;
             cmbDeleteAddress.ValueMember = "idaddress";
             cmbDeleteAddress.DisplayMember = "address";
-            cmbDeleteAddress.DataSource = DireccionesConsulta.getLista(); 
+            cmbDeleteAddress.DataSource = DireccionesConsulta.userVerDirecciones(usuario);
             
             cmbAddressMod.DataSource = null;
             cmbAddressMod.ValueMember = "idaddress";
             cmbAddressMod.DisplayMember = "address";
-            cmbAddressMod.DataSource = DireccionesConsulta.getLista(); 
+            cmbAddressMod.DataSource = DireccionesConsulta.userVerDirecciones(usuario);
+        }
+
+        private void ActualizarControlesUserO()
+        {
+            cmbProdOrden.DataSource = null;
+            cmbProdOrden.ValueMember = "idproducto";
+            cmbProdOrden.DisplayMember = "name";
+            cmbProdOrden.DataSource = ProductosConsulta.getLista(); 
+            
+            cmbAddressOrder.DataSource = null;
+            cmbAddressOrder.ValueMember = "idaddress";
+            cmbAddressOrder.DisplayMember = "address";
+            cmbAddressOrder.DataSource = DireccionesConsulta.userVerDirecciones(usuario);
+
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = OrdenesConsulta.verMisOrdenes(usuario);
+            
+            cmbNumOrder.DataSource = null;
+            cmbNumOrder.DataSource = OrdenesConsulta.verMisOrdenes(usuario);
+            cmbNumOrder.DisplayMember = "idorder";
+
+
         }
 
         private void MenuPrincipal_FormClosing(object sender, FormClosingEventArgs e)
@@ -152,7 +170,7 @@ namespace Parcial02
         {
             try
             {
-                if (txtNuevoUsername.Text.Length >= 4)
+                if (txtNuevoUsername.Text.Length >= 4 && txtNuevoFullname.Text.Length >= 5)
                 {
                     UsuariosConsulta.crearNuevo(txtNuevoFullname.Text, txtNuevoUsername.Text, AdminRad.Checked);
 
@@ -165,7 +183,7 @@ namespace Parcial02
                     actualizarControles();
                 }
                 else
-                    MessageBox.Show("Por favor digite un usuario (longitud minima, 4 caracteres)",
+                    MessageBox.Show("Por favor digite el nombre completo y el usuario (longitud minima, nombre 5 y usuario 4 caracteres)",
                         "Hugo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             catch (Exception)
@@ -320,7 +338,7 @@ namespace Parcial02
         {
             try
             {
-                if (txtAddAddress.Text.Length >= 6)
+                if (txtModAddress.Text.Length >= 6)
                 {
                     DireccionesConsulta.ActualizarDireccion(cmbAddressMod.Text, txtModAddress.Text);
 
@@ -340,6 +358,72 @@ namespace Parcial02
             {
                 MessageBox.Show("Error: " + exc.Message, "Hugo",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void buttonAddOrder_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DateTime fecha = DateTime.Now;
+                string fecha2 = Convert.ToString(fecha);
+
+                Producto pro = (Producto) cmbProdOrden.SelectedItem;
+                Direccion ad  = (Direccion) cmbAddressOrder.SelectedItem;
+                
+                OrdenesConsulta.CrearOrden(fecha2, pro, ad);
+
+                MessageBox.Show("La orden ha sido creada exitosamente", "Hugo",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                ActualizarControlesUserO();
+
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show("Error: " + exception.Message, "Hugo",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
+        }
+
+        private void buttonDelOrder_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Seguro que desea eliminar la orden # " + cmbDeleteAddress.Text + "?",
+                "Hugo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                OrdenesConsulta.eliminarOrden(Convert.ToInt32(cmbNumOrder.SelectedValue));
+
+                MessageBox.Show("¡La orden ha sido eliminada exitosamente!",
+                    "Hugo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                ActualizarControlesUserO();
+            }
+        }
+        
+        private void configuarGrafico()
+        {
+            graficoFilas = new CartesianChart();
+            graficoFilas.Parent = tabControl1.TabPages[4];
+            
+            graficoFilas.Top = 10;
+            graficoFilas.Left = 10;
+            graficoFilas.Width = graficoFilas.Parent.Width - 10;
+            graficoFilas.Height = graficoFilas.Parent.Height - 10;
+            
+            graficoFilas.Series = new SeriesCollection
+            {
+                new RowSeries{Title = "Cantidad de veces que se le ha pedido a un negocio", Values = new ChartValues<int>(), DataLabels = true}
+            };
+            graficoFilas.AxisY.Add(new Axis{Labels = new List<string>()});
+            graficoFilas.AxisX.Add(new Axis{MaxValue = 100});
+            graficoFilas.LegendLocation = LegendLocation.Bottom;
+
+            
+            foreach (Negocio negocio in NegociosConsulta.getLista())
+            {
+                graficoFilas.Series[0].Values.Add(negocio.idBusiness);
+                graficoFilas.AxisY[0].Labels.Add(negocio.name);
             }
         }
     }

@@ -43,5 +43,27 @@ namespace Parcial02
                     
             ConnectionDB.ExecuteNonQuery(sql);
         }
+
+        public static List<Negocio> getLista2()
+        {
+            string sql = String.Format("SELECT b.name AS 'Negocio', sum(cp.cant) AS 'Total pedidos' " +
+            " FROM BUSINESS b, (SELECT p.idBusiness, p.name, count(ap.idProduct) AS 'cant' " +
+            " FROM PRODUCT p, APPORDER ap WHERE p.idProduct = ap.idProduct GROUP BY p.idProduct " +
+            " ORDER BY p.name ASC) AS cpp WHERE b.idBusiness = cp.idBusinesss GROUP BY b.idBusiness;");
+            
+            DataTable dt = ConnectionDB.ExecuteQuery(sql);
+
+            List<Negocio> lista = new List<Negocio>();
+            foreach (DataRow fila in dt.Rows)
+            {
+                Negocio business = new Negocio();
+                business.name = fila[0].ToString();
+                business.idBusiness = Convert.ToInt32(fila[1].ToString());
+                
+                
+                lista.Add(business);
+            }
+            return lista;
+        }
     }
 }

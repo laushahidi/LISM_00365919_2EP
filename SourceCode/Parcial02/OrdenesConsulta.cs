@@ -29,7 +29,7 @@ namespace Parcial02
         
         public static DataTable adminVerPedidos()
         {
-           DataTable dt = null;
+            DataTable dt = null;
             try
             {
                 dt = ConnectionDB.ExecuteQuery("SELECT ao.idOrder, ao.createDate, pr.name, au.fullname, ad.address " +
@@ -43,6 +43,43 @@ namespace Parcial02
             }
 
             return dt;
+        }
+        
+        public static void CrearOrden(string time, Producto pro, Direccion ad)
+        {
+            string sql = String.Format(
+                "INSERT INTO APPORDER(createDate, idProduct, idAddress)" +
+            "VALUES('26-05-2020', 1, 1)");
+            
+            ConnectionDB.ExecuteNonQuery(sql);
+        }
+        
+        public static void eliminarOrden(int orden)
+        {
+            string sql = String.Format(
+                "DELETE FROM APPORDER WHERE idOrder = {0};",
+                orden);
+                  
+            ConnectionDB.ExecuteNonQuery(sql);
+        }
+        public static DataTable verMisOrdenes(Usuario us)
+        {
+            DataTable dt = null;
+            try
+            {
+                dt = ConnectionDB.ExecuteQuery(string.Format("SELECT ao.idOrder, ao.createDate, pr.name, au.fullname, ad.address " +
+                                                             " FROM APPORDER ao, ADDRESS ad, PRODUCT pr, APPUSER au WHERE ao.idProduct = pr.idProduct " +
+                                                             " AND ao.idAddress = ad.idAddress AND ad.idUser = au.idUser AND au.idUser = {0};",
+                    us.idUser));
+                
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+
+            return dt;
+            
         }
     }
 }

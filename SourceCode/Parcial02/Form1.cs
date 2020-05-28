@@ -24,7 +24,10 @@ namespace Parcial02
             comboBox1.DisplayMember = "username";
             comboBox1.DataSource = UsuariosConsulta.getLista();
         }
-
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            poblarControles();
+        }
 
         private void buttonIngresar_Click(object sender, EventArgs e)
         {
@@ -32,7 +35,8 @@ namespace Parcial02
             {
                 Usuario u = (Usuario) comboBox1.SelectedItem;
                 //Usuario u = new Usuario();
-                //u.username = comboBox1.SelectedValue.ToString();
+                //u.username = comboBox1.SelectedText;
+
                                  
                 MessageBox.Show("¡Bienvenido!", 
                     "Hugo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -40,6 +44,7 @@ namespace Parcial02
                 MenuPrincipal ventana = new MenuPrincipal(u);
                 ventana.Show();
                 this.Hide();
+               
             }
             else
                 MessageBox.Show("¡Contraseña incorrecta!", "Hugo",
@@ -50,12 +55,6 @@ namespace Parcial02
         private void txtPass_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter) buttonIngresar_Click(sender, e);
-        }
-
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            poblarControles();
         }
 
 
