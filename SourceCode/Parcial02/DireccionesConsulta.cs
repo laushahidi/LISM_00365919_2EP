@@ -26,6 +26,27 @@ namespace Parcial02
             return lista;
         }
         
+        public static List<Direccion> getListaD(Usuario u)
+        {
+            string sql = string.Format("SELECT ad.idAddress, ad.address FROM ADDRESS ad " +
+                                       "WHERE idUser = {0}", u.idUser);
+           
+            DataTable dt = ConnectionDB.ExecuteQuery(sql);
+
+            List<Direccion> lista = new List<Direccion>();
+            
+            foreach (DataRow fila in dt.Rows)
+            {
+                Direccion address = new Direccion();
+                address.idAddress = Convert.ToInt32(fila[0].ToString());
+                address.idUser = u.idUser;
+                address.address = fila[1].ToString();
+                
+                lista.Add(address);
+            }
+            return lista;
+        }
+        
         public static DataTable userVerDirecciones(Usuario u)
         {
             DataTable dt = null;

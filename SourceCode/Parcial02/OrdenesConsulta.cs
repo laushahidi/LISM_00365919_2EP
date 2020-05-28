@@ -49,7 +49,7 @@ namespace Parcial02
         {
             string sql = String.Format(
                 "INSERT INTO APPORDER(createDate, idProduct, idAddress)" +
-            "VALUES('26-05-2020', 1, 1)");
+            "VALUES('{0}', {1}, {2})", time, pro.idProduct, ad.idAddress);
             
             ConnectionDB.ExecuteNonQuery(sql);
         }

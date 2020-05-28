@@ -136,7 +136,7 @@ namespace Parcial02
             cmbAddressOrder.DataSource = null;
             cmbAddressOrder.ValueMember = "idaddress";
             cmbAddressOrder.DisplayMember = "address";
-            cmbAddressOrder.DataSource = DireccionesConsulta.userVerDirecciones(usuario);
+            cmbAddressOrder.DataSource = DireccionesConsulta.getListaD(usuario);
 
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = OrdenesConsulta.verMisOrdenes(usuario);
@@ -287,7 +287,7 @@ namespace Parcial02
             {
                 ProductosConsulta.eliminarProducto(cmbProdDelete.Text);
 
-                MessageBox.Show("¡Negocio eliminado exitosamente!",
+                MessageBox.Show("¡Producto eliminado exitosamente!",
                     "Hugo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 actualizarControlesP();

@@ -43,8 +43,6 @@ namespace Parcial02
                 "values('{0}', '{1}', '{2}', {3});",
                 fullname, username, username, userType);
             
-            //INSERT INTO APPUSER(fullname, username, password, userType)
-            //VALUES('Walter Morales', 'wmorales', 'admin', true);
 
             
             ConnectionDB.ExecuteNonQuery(sql);

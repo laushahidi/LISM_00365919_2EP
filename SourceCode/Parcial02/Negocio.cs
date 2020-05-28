@@ -16,12 +16,6 @@ namespace Parcial02
             descripcion = "";
         }
 
-        public Negocio(int n_idBusiness, string n_name, string n_descripcion)
-        {
-            idBusiness = n_idBusiness;
-            name = n_name;
-            descripcion = n_descripcion;
-            
-        }
+        
     }
 }
