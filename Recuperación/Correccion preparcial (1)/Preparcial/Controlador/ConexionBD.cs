@@ -10,7 +10,7 @@ namespace Preparcial.Controlador
                                         "Port=5432;" +
                                         "UserId=postgres;" +
                                         "Password=uca;" +
-                                        "Database=preparcial2;";
+                                        "Database=preparcial;";
 
         // Ejecutar consulta (Comando SELECT)
         public static DataTable EjecutarConsulta(string consulta)
