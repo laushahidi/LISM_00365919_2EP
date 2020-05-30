@@ -47,7 +47,6 @@ namespace Preparcial
                 // Esconder frmLogin y mostrar frmMain
                 Hide();
                 frmMain.Show();
-                
             }
             else
                 MessageBox.Show("Contrasena incorrecta");

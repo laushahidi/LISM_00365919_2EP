@@ -128,11 +128,11 @@
             this.createNewUserTab.Controls.Add(this.label2);
             this.createNewUserTab.Controls.Add(this.txtNewUser);
             this.createNewUserTab.Controls.Add(this.dgvCreateUser);
-            this.createNewUserTab.Location = new System.Drawing.Point(4, 29);
+            this.createNewUserTab.Location = new System.Drawing.Point(4, 25);
             this.createNewUserTab.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.createNewUserTab.Name = "createNewUserTab";
             this.createNewUserTab.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.createNewUserTab.Size = new System.Drawing.Size(856, 448);
+            this.createNewUserTab.Size = new System.Drawing.Size(856, 452);
             this.createNewUserTab.TabIndex = 1;
             this.createNewUserTab.Text = "Crear usuario";
             this.createNewUserTab.UseVisualStyleBackColor = true;
@@ -186,10 +186,10 @@
             this.inventaryTab.Controls.Add(this.groupBox2);
             this.inventaryTab.Controls.Add(this.groupBox1);
             this.inventaryTab.Controls.Add(this.dgvInventary);
-            this.inventaryTab.Location = new System.Drawing.Point(4, 29);
+            this.inventaryTab.Location = new System.Drawing.Point(4, 25);
             this.inventaryTab.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.inventaryTab.Name = "inventaryTab";
-            this.inventaryTab.Size = new System.Drawing.Size(856, 448);
+            this.inventaryTab.Size = new System.Drawing.Size(856, 452);
             this.inventaryTab.TabIndex = 2;
             this.inventaryTab.Text = "Inventario";
             this.inventaryTab.UseVisualStyleBackColor = true;
@@ -411,10 +411,10 @@
             // createOrderTab
             // 
             this.createOrderTab.Controls.Add(this.groupBox4);
-            this.createOrderTab.Location = new System.Drawing.Point(4, 29);
+            this.createOrderTab.Location = new System.Drawing.Point(4, 25);
             this.createOrderTab.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.createOrderTab.Name = "createOrderTab";
-            this.createOrderTab.Size = new System.Drawing.Size(856, 448);
+            this.createOrderTab.Size = new System.Drawing.Size(856, 452);
             this.createOrderTab.TabIndex = 4;
             this.createOrderTab.Text = "Hacer pedido/Ver mis pedidos";
             this.createOrderTab.UseVisualStyleBackColor = true;
@@ -498,10 +498,10 @@
             // viewOrdersTab
             // 
             this.viewOrdersTab.Controls.Add(this.dgvAllOrders);
-            this.viewOrdersTab.Location = new System.Drawing.Point(4, 29);
+            this.viewOrdersTab.Location = new System.Drawing.Point(4, 25);
             this.viewOrdersTab.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.viewOrdersTab.Name = "viewOrdersTab";
-            this.viewOrdersTab.Size = new System.Drawing.Size(856, 448);
+            this.viewOrdersTab.Size = new System.Drawing.Size(856, 452);
             this.viewOrdersTab.TabIndex = 3;
             this.viewOrdersTab.Text = "Ver pedidos";
             this.viewOrdersTab.UseVisualStyleBackColor = true;

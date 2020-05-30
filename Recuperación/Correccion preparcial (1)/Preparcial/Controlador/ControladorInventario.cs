@@ -37,7 +37,7 @@ namespace Preparcial.Controlador
                 // Consulta para llenar el DataTable
                 dt = ConexionBD.EjecutarConsulta("SELECT * FROM INVENTARIO");
 
-                // Por cada fila del DataTable, crear un nuevo usuario anadiendolo a la lista
+                // Por cada fila del DataTable, crear un nuevo pruducto anadiendolo a la lista
                 foreach(DataRow dr in dt.Rows)
                 {
                     productos.Add(new Inventario

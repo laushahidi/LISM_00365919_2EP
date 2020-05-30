@@ -47,7 +47,7 @@ namespace Preparcial.Vista
                 txtNewPassword.Text);
             }
             else
-            // Correccion: cambiar mensaje de error por si la old password esta bien pero el lenght no
+            // Correccion: cambiar mensaje de error por si la old password esta bien pero el length no
                 MessageBox.Show("Por favor verifique que los datos sean correctos");
         }
     } 

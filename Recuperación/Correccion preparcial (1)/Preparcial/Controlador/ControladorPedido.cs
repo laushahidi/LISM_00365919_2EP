@@ -12,7 +12,7 @@ namespace Preparcial.Controlador
 
             try
             {
-                // Correccion: cambiar 'nombreArticulo' por 'nombreArt'
+                // Correccion: cambiar 'nombreArticulo' por 'nombreArt' y poner {id} entre comillas simples por ser string
                 pedidos = ConexionBD.EjecutarConsulta("SELECT p.idPedido, i.nombreArt, p.cantidad, i.precio, (i.precio * p.cantidad) AS total" +
                                             " FROM PEDIDO p, INVENTARIO i, USUARIO u" +
                                             " WHERE p.idArticulo = i.idArticulo" +
@@ -21,7 +21,7 @@ namespace Preparcial.Controlador
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Ha ocurrido un ERROR");
+                MessageBox.Show("Ha ocurrido un error");
             }
 
             return pedidos;
