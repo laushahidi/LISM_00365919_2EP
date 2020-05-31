@@ -3,10 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="48558105-2229-4480-9316-b117bbbe5806" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Preparcial/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Preparcial/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controlador/ConexionBD.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controlador/ConexionBD.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controlador/ControladorInventario.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controlador/ControladorInventario.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controlador/ControladorPedido.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controlador/ControladorPedido.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controlador/ControladorUsuario.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controlador/ControladorUsuario.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vista/FrmMain.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Vista/FrmMain.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/Preparcial.exe" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/Preparcial.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/Preparcial.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/Preparcial.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/Preparcial.exe" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Preparcial.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/Preparcial.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Preparcial.pdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,13 +34,13 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Modelo/Inventario.cs" />
-        <option value="$PROJECT_DIR$/Vista/FrmMain.cs" />
         <option value="$PROJECT_DIR$/Vista/FrmPassword.cs" />
         <option value="$PROJECT_DIR$/Vista/FrmLogin.cs" />
         <option value="$PROJECT_DIR$/Controlador/ControladorInventario.cs" />
         <option value="$PROJECT_DIR$/Controlador/ControladorUsuario.cs" />
         <option value="$PROJECT_DIR$/Controlador/ConexionBD.cs" />
         <option value="$PROJECT_DIR$/Controlador/ControladorPedido.cs" />
+        <option value="$PROJECT_DIR$/Vista/FrmMain.cs" />
       </list>
     </option>
   </component>
@@ -88,7 +90,7 @@
       <workItem from="1590787135979" duration="13772000" />
       <workItem from="1590810053011" duration="830000" />
       <workItem from="1590811453384" duration="56000" />
-      <workItem from="1590903462658" duration="795000" />
+      <workItem from="1590903462658" duration="1616000" />
     </task>
     <servers />
   </component>
@@ -98,22 +100,22 @@
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="WindowStateProjectService">
-    <state width="1493" height="208" key="GridCell.Tab.0.bottom" timestamp="1590904453516">
+    <state width="1493" height="208" key="GridCell.Tab.0.bottom" timestamp="1590904736798">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="208" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590904453516" />
-    <state width="1493" height="208" key="GridCell.Tab.0.center" timestamp="1590904453512">
+    <state width="1493" height="208" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590904736798" />
+    <state width="1493" height="208" key="GridCell.Tab.0.center" timestamp="1590904736795">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="208" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1590904453512" />
-    <state width="1493" height="208" key="GridCell.Tab.0.left" timestamp="1590904453512">
+    <state width="1493" height="208" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1590904736795" />
+    <state width="1493" height="208" key="GridCell.Tab.0.left" timestamp="1590904736795">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="208" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1590904453512" />
-    <state width="1493" height="208" key="GridCell.Tab.0.right" timestamp="1590904453512">
+    <state width="1493" height="208" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1590904736795" />
+    <state width="1493" height="208" key="GridCell.Tab.0.right" timestamp="1590904736795">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="208" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1590904453512" />
+    <state width="1493" height="208" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1590904736795" />
     <state width="724" height="217" key="GridCell.Tab.1.bottom" timestamp="1590806907951">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

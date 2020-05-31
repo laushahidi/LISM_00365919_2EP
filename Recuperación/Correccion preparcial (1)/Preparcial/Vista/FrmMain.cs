@@ -78,6 +78,7 @@ namespace Preparcial.Vista
 
         private void bttnUpdateStockInventary_Click(object sender, EventArgs e)
         {
+            // Correccion: e designer, poner "Actualizar producto" en lugar de "Eliminar producto"
             if (txtUpdateStockIdInventary.Text.Equals("") && txtUpdateStockInventary.Text.Equals(""))
                 MessageBox.Show("No puede dejar campos vacios");
             else
