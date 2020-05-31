@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="48558105-2229-4480-9316-b117bbbe5806" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Preparcial/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Preparcial/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controlador/ControladorPedido.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controlador/ControladorPedido.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vista/FrmMain.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Vista/FrmMain.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/Preparcial.exe" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/Preparcial.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/Preparcial.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/Preparcial.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/Preparcial.exe" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Preparcial.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/Preparcial.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Preparcial.pdb" afterDir="false" />
-    </list>
+    <list default="true" id="48558105-2229-4480-9316-b117bbbe5806" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,7 +25,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Modelo/Inventario.cs" />
         <option value="$PROJECT_DIR$/Vista/FrmPassword.cs" />
         <option value="$PROJECT_DIR$/Vista/FrmLogin.cs" />
         <option value="$PROJECT_DIR$/Controlador/ControladorInventario.cs" />
@@ -41,6 +32,7 @@
         <option value="$PROJECT_DIR$/Controlador/ConexionBD.cs" />
         <option value="$PROJECT_DIR$/Controlador/ControladorPedido.cs" />
         <option value="$PROJECT_DIR$/Vista/FrmMain.cs" />
+        <option value="$PROJECT_DIR$/Modelo/Inventario.cs" />
       </list>
     </option>
   </component>
@@ -90,7 +82,7 @@
       <workItem from="1590787135979" duration="13772000" />
       <workItem from="1590810053011" duration="830000" />
       <workItem from="1590811453384" duration="56000" />
-      <workItem from="1590903462658" duration="1616000" />
+      <workItem from="1590903462658" duration="1900000" />
     </task>
     <servers />
   </component>
