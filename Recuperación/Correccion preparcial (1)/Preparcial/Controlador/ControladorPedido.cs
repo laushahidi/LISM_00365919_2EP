@@ -12,12 +12,11 @@ namespace Preparcial.Controlador
 
             try
             {
-                // Correccion: cambiar 'nombreArticulo' por 'nombreArt' y poner {id} entre comillas simples por ser string
                 pedidos = ConexionBD.EjecutarConsulta("SELECT p.idPedido, i.nombreArt, p.cantidad, i.precio, (i.precio * p.cantidad) AS total" +
                                             " FROM PEDIDO p, INVENTARIO i, USUARIO u" +
                                             " WHERE p.idArticulo = i.idArticulo" +
                                             " AND p.idUsuario = u.idUsuario" +
-                                            $" AND u.idUsuario = '{id}'");
+                                            $" AND u.idUsuario = {id}");
             }
             catch (Exception ex)
             {
@@ -33,7 +32,6 @@ namespace Preparcial.Controlador
 
             try
             {
-                // Correccion: cambiar 'i.nombreArticulo' por 'i.nombreArt'
                 pedidos = ConexionBD.EjecutarConsulta("SELECT p.idPedido, i.nombreArt, p.cantidad, i.precio, (i.precio * p.cantidad) AS total" +
                                             " FROM PEDIDO p, INVENTARIO i, USUARIO u" +
                                             " WHERE p.idArticulo = i.idArticulo" +

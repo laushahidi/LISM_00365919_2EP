@@ -72,7 +72,6 @@ namespace Preparcial.Controlador
         {
             try
             {
-                // Correccion: cambiar 'nombreUsuario' por 'nombre'
                 ConexionBD.EjecutarComando("INSERT INTO USUARIO(nombre, contrasenia, tipo)" +
                     $" VALUES('{usuario}', '{usuario}', false)");
 
